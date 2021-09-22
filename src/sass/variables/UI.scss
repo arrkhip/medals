@@ -16,27 +16,31 @@ button {
   line-height: $button-line-height;
   color: $white;
   text-align: center;
-  background-color: $red;
-  border-color: $red;
+  text-transform: uppercase;
+  background-color: $second;
+  border-color: $second;
   border-style: solid;
   border-width: 1px;
   border-radius: $button-border-radius;
-  transition-property: color, background-color, border, box-shadow;
-  transition-duration: $transition-duration;
   transition-timing-function: $transition-timing-function;
-
-  @include max-width($touch) {
-    padding: $button-padding-sm;
-  }
+  transition-duration: $transition-duration;
+  transition-property: color, background-color, border, box-shadow;
 
   &:hover {
-    color: $red;
-    background-color: transparent;
+    color: $second;
+    background-color: $white;
   }
 
   &:focus {
     outline: transparent;
-    box-shadow: 0 0 2px 2px rgba($color: $red, $alpha: 0.5);
+    box-shadow: 0 0 2px 2px rgba($second, 0.5);
+  }
+
+  &:disabled {
+    color: $gray-light;
+    cursor: not-allowed;
+    background-color: $gray-extra-light;
+    border-color: $gray-extra-light;
   }
 }
 
@@ -55,10 +59,9 @@ button {
   border: $input-border;
   border-radius: $input-border-radius;
   outline: transparent;
-
-  @include max-width($touch) {
-    padding: $input-padding-sm;
-  }
+  transition-timing-function: $transition-timing-function;
+  transition-duration: $transition-duration;
+  transition-property: color, background-color, border, box-shadow;
 
   @include placeholder() {
     font-family: $input-font;
@@ -67,18 +70,30 @@ button {
     line-height: $input-line-height;
     color: $input-color-placeholder;
     opacity: 1;
-    transition-property: transform, opacity;
-    transition-duration: $transition-duration;
     transition-timing-function: $transition-timing-function;
+    transition-duration: $transition-duration;
+    transition-property: transform, opacity;
+  }
+
+  &:hover {
+    border-color: $second;
   }
 
   &:focus {
+    border-color: $second;
     box-shadow: $input-focus;
 
     @include placeholder() {
       opacity: 0;
       transform: translateX(100%);
     }
+  }
+
+  &:disabled {
+    color: $gray-light;
+    cursor: not-allowed;
+    background-color: $gray-extra-light;
+    border-color: $gray-extra-light;
   }
 }
 
@@ -87,10 +102,6 @@ button {
   padding: $textarea-padding;
   margin: $textarea-margin;
   resize: none;
-
-  @include max-width($touch) {
-    padding: $textarea-padding-sm;
-  }
 }
 
 /* Checkboxes && Radios */
@@ -98,7 +109,7 @@ button {
 .radio {
   position: relative;
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
   margin: $checkbox-margin;
   cursor: pointer;
 
@@ -134,9 +145,9 @@ button {
     background-color: $checkbox-bg-color;
     border: $checkbox-border;
     border-radius: $checkbox-border-radius;
-    transition-property: background-color;
-    transition-duration: $transition-duration;
     transition-timing-function: $transition-timing-function;
+    transition-duration: $transition-duration;
+    transition-property: background-color;
   }
 
   &__text {
@@ -151,9 +162,9 @@ button {
   &__link {
     color: $checkbox-link-color;
     text-decoration: $checkbox-link-text-decoration;
-    transition-property: color;
-    transition-duration: $transition-duration;
     transition-timing-function: $transition-timing-function;
+    transition-duration: $transition-duration;
+    transition-property: color;
 
     &:hover {
       color: $checkbox-link-color-hover;
@@ -166,9 +177,9 @@ button {
     height: $checkbox-icon-size;
     opacity: 0;
     fill: $red;
-    transition-property: opacity;
-    transition-duration: $transition-duration;
     transition-timing-function: $transition-timing-function;
+    transition-duration: $transition-duration;
+    transition-property: opacity;
   }
 }
 
@@ -205,10 +216,10 @@ button {
       background-color: $radio-icon-bg-color;
       border-radius: $radio-border-radius;
       opacity: 0;
-      transform: translate(-50%, -50%);
-      transition-property: opacity;
-      transition-duration: $transition-duration;
       transition-timing-function: $transition-timing-function;
+      transition-duration: $transition-duration;
+      transition-property: opacity;
+      transform: translate(-50%, -50%);
     }
   }
 }
