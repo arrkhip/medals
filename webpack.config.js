@@ -50,7 +50,6 @@ const config = {
   // pages
   entry: {
     main: './src/js/_main.js',
-    index: './src/js/_index.js',
   },
   output: {
     filename: (chunkData) => {

@@ -1,0 +1,245 @@
+.form {
+  position: relative;
+}
+
+.form__title {
+  margin: 0 0 20px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: $gray-extra-dark;
+  text-align: center;
+}
+
+.form__hidden {
+  padding: 0 5px;
+  margin: 0 -5px;
+  overflow: hidden;
+  transition-timing-function: $transition-timing-function;
+  transition-duration: $transition-duration;
+  transition-property: max-height;
+}
+
+.form__grid {
+  display: grid;
+  gap: 20px;
+}
+
+// form__payment
+.form__payment {
+  margin: 32px 0 0 0;
+}
+
+.form__payment-title {
+  margin: 0 0 16px 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.33;
+  color: $gray-extra-dark;
+  text-align: center;
+}
+
+.form__payment-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__payment-item + .form__payment-item {
+  margin: 8px 0 0 0;
+}
+
+.form__payment-label {
+  position: relative;
+  width: 100%;
+  font-size: 0.875rem;
+  line-height: 1.29;
+  color: $gray-dark;
+  cursor: pointer;
+
+  b {
+    font-weight: bold;
+  }
+
+  a {
+    color: #814724;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.form__payment-input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -2;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  appearance: none;
+}
+
+.form__payment-block {
+  position: relative;
+  padding: 12px;
+  background: $white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  transition-timing-function: $transition-timing-function;
+  transition-duration: $transition-duration;
+  transition-property: border-color, box-shadow;
+
+  .form__payment-input:hover + &,
+  .form__payment-input:checked + & {
+    border-color: $second;
+  }
+
+  .form__payment-input:focus + & {
+    box-shadow: 0 0 2px 2px rgba($second, 0.5);
+  }
+}
+
+.form__payment-box {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: $white;
+  border: 1px solid $gray-light;
+  border-radius: 50%;
+  transition-timing-function: $transition-timing-function;
+  transition-duration: $transition-duration;
+  transition-property: border-color;
+
+  .form__payment-input:checked + .form__payment-block & {
+    border-color: $second;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 8px;
+    height: 8px;
+    content: '';
+    background-color: #ac003e;
+    border-radius: 50%;
+    opacity: 0;
+    transition-timing-function: $transition-timing-function;
+    transition-duration: $transition-duration;
+    transition-property: opacity;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.form__payment-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 34px;
+}
+
+.form__payment-row + .form__payment-row {
+  margin: 4px 0 0 0;
+}
+
+.form__payment-image {
+  min-width: 100px;
+  margin: 0 16px 0 0;
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+// form__payment-label--gold
+.form__payment-label--gold {
+  .form__payment-block {
+    background: radial-gradient(56.27% 128.64% at 3.06% 100%, #dccda7 0%, rgba(250, 247, 237, 0) 100%),
+      radial-gradient(39.6% 81.7% at 100% 0%, #e2d5b5 0.22%, rgba(250, 247, 237, 0) 95.77%), #fbf6e6;
+  }
+}
+
+// form__row
+.form__row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  align-items: center;
+}
+
+.form__row-label {
+  font-size: 0.875rem;
+  line-height: 1.43;
+  color: $gray-dark;
+
+  em {
+    color: $second;
+  }
+}
+
+.form__row-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__submit {
+  display: flex;
+  flex-direction: column;
+  margin: 24px 0 0 0;
+
+  .button {
+    cursor: pointer;
+  }
+}
+
+.form__policy {
+  margin: 20px 0 0 0;
+}
+
+// form__message
+.form__message {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  height: auto;
+  padding: 24px;
+  background: $white;
+  border-radius: 4px;
+  box-shadow: 0 0 24px rgba($black, 0.2);
+}
+
+.form__message-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.form__message-icon {
+  margin: 0 0 12px 0;
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+.form__message-text {
+  text-align: center;
+}

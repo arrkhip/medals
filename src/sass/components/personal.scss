@@ -1,0 +1,76 @@
+.personal {
+  width: 100%;
+  margin: 0 0 8px 0;
+}
+
+.personal__stars {
+  display: block;
+  margin: 0 auto 8px auto;
+}
+
+.personal__message {
+  margin: 0 0 20px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.personal__info {
+  margin: 0 0 20px 0;
+}
+
+.personal__info-row {
+  display: flex;
+}
+
+.personal__info-row + .personal__info-row {
+  margin: 12px 0 0 0;
+}
+
+.personal__info-icon {
+  margin: 0 12px 0 0;
+}
+
+.personal__info-svg {
+  display: block;
+  width: 1.25rem;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  min-height: 1.25rem;
+  fill: $main-light;
+  stroke: $main-light;
+}
+
+.personal__info-text {
+  font-size: 0.875rem;
+  line-height: 1.43;
+
+  b {
+    font-weight: 500;
+  }
+}
+
+.personal__edit {
+  display: flex;
+}
+
+.personal__edit-icon {
+  margin: 0 12px 0 0;
+}
+
+.personal__edit-svg {
+  display: block;
+  width: 1.25rem;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  min-height: 1.25rem;
+  fill: $main;
+  stroke: $main;
+}
+
+.personal__edit-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.43;
+}

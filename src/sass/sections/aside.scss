@@ -1,0 +1,9 @@
+.aside {
+  .with-aside & {
+    margin: -612px 0 0 0;
+  }
+}
+
+.aside__block + .aside__block {
+  margin: 20px 0 0 0;
+}

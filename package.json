@@ -63,8 +63,10 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "plyr": "^3.6.8",
     "scroll-lock": "^2.1.4",
-    "serialize-javascript": "^5.0.1"
+    "serialize-javascript": "^5.0.1",
+    "swiper": "^7.0.6"
   },
   "husky": {
     "hooks": {

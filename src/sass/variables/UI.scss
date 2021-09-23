@@ -44,6 +44,49 @@ button {
   }
 }
 
+.button--close {
+  min-width: initial;
+  padding: 0;
+  font-size: 28px;
+  background-color: transparent;
+  border: none;
+
+  &:hover svg {
+    fill: $second;
+    stroke: #f2f2f2;
+  }
+
+  &:focus {
+    box-shadow: none;
+
+    svg {
+      box-shadow: 0 0 2px 2px rgba($second, 0.5);
+    }
+  }
+
+  &:disabled {
+    svg {
+      fill: $gray-extra-light;
+      stroke: $gray-light;
+    }
+
+    background-color: transparent;
+  }
+
+  svg {
+    width: 1em;
+    min-width: 1em;
+    height: 1em;
+    min-height: 1em;
+    border-radius: 0.07142857em;
+    fill: #f2f2f2;
+    stroke: #899199;
+    transition-timing-function: $transition-timing-function;
+    transition-duration: $transition-duration;
+    transition-property: fill, stroke, box-shadow;
+  }
+}
+
 /* Inputs && Textareas */
 .input,
 .textarea {
