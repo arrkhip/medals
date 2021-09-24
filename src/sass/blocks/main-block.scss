@@ -22,6 +22,39 @@
   }
 }
 
+.main-block__phone {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% + 48px);
+  padding: 24px;
+  margin: 0 -24px 24px -24px;
+  text-align: center;
+  background: radial-gradient(35.47% 109.83% at 0% 12.14%, #d8caaa 0%, rgba(250, 247, 237, 0) 100%),
+    radial-gradient(101.07% 193.95% at 100% 91.79%, #e0d4b8 0%, rgba(250, 247, 237, 0) 50.22%), #fbf6e6;
+
+  p {
+    margin: 0 0 12px 0;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.71;
+    color: $main;
+  }
+
+  a {
+    margin: 0 0 8px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1;
+    color: $gray-extra-dark;
+  }
+
+  span {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: $gray-dark;
+  }
+}
+
 .main-block__title {
   margin: 0 0 8px 0;
   font-size: 1.5rem;
