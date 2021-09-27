@@ -1,0 +1,104 @@
+<!-- modal-product -->
+<div class="modal-wrapper j_modal" id="modal-auth">
+  <div class="modal">
+    <button class="modal__close button button--close j_closeModal">
+      <svg>
+        <use xlink:href="#close"></use>
+      </svg>
+    </button>
+    <!-- auth -->
+    <div class="auth">
+      <!-- wrapper -->
+      <div class="auth__wrapper">
+        <!-- tabs -->
+        <div class="auth__tabs" data-tabs="auth">
+          <button class="auth__tab" data-tab="1">Войти</button>
+          <button class="auth__tab" data-tab="2">Регистрация</button>
+        </div>
+        <!-- ./ End of tabs -->
+        <!-- contents -->
+        <div class="auth__contents" data-tabs-contents="auth">
+          <!-- content -->
+          <div class="auth__content" data-tab-content="1">
+            <!-- form -->
+            <form class="form">
+              <!-- grid -->
+              <div class="form__grid">
+                <!-- row -->
+                <div class="form__row">
+                  <div class="form__row-label">
+                    <label for="email">E-mail<em>*</em></label>
+                  </div>
+                  <div class="form__row-input">
+                    <input id="email" type="email" class="input">
+                  </div>
+                </div>
+                <!-- ./ End of row -->
+                <!-- row -->
+                <div class="form__row">
+                  <div class="form__row-label">
+                    <label for="name">Пароль<em>*</em></label>
+                  </div>
+                  <div class="form__row-input">
+                    <input id="name" type="password" class="input">
+                  </div>
+                </div>
+                <!-- ./ End of row -->
+              </div>
+              <!-- ./ End of grid -->
+              <!-- remember -->
+              <div class="form__remember">
+                <div data-accordion="remember">
+                  <label class="checkbox checkbox--large">
+                    <input class="checkbox__input" type="checkbox" />
+                    <div class="checkbox__custom">
+                      <svg class="checkbox__icon">
+                        <use xlink:href="#done"></use>
+                      </svg>
+                    </div>
+                    <span class="checkbox__text">
+                      Запомнить меня. <button class="checkbox__button accordion-button" type="button">Что это
+                        значит?</button>
+                    </span>
+                  </label>
+                  <div class="form__remember-hidden accordion-content">
+                    <div class="form__remember-inner">
+                      <p>Поставьте галочку в этом поле, если не хотите авторизовываться каждый раз при входе на сайт. Вы
+                        сможете выйти из своего аккаунта в любой момент.</p>
+                      <button class="form__remember-button accordion-button" type="button">
+                        Свернуть
+                        <svg class="form__remember-svg">
+                          <use xlink:href="#angle"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ./ End of remember -->
+              <!-- submit -->
+              <div class="form__submit">
+                <input type="submit" value="Заказать" class="button">
+              </div>
+              <!-- ./ End of submit -->
+              <!-- link -->
+              <div class="form__link">
+                <a href="#">Забыли пароль?</a>
+              </div>
+              <!-- ./ End of link -->
+            </form>
+            <!-- ./ End of form -->
+          </div>
+          <!-- ./ End of content -->
+          <!-- content -->
+          <div class="auth__content" data-tab-content="2"></div>
+          <!-- ./ End of content -->
+        </div>
+        <!-- ./ End of contents -->
+      </div>
+      <!-- ./ End of wrapper -->
+    </div>
+    <!-- ./ End of auth -->
+  </div>
+</div>
+<!-- ./ End of modal-product -->

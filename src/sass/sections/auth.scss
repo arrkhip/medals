@@ -1,0 +1,55 @@
+.auth__tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 24px 0;
+}
+
+.auth__tab {
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1;
+  color: $gray-light;
+  background: none;
+  border: none;
+  transition-timing-function: $transition-timing-function;
+  transition-duration: $transition-duration;
+  transition-property: color;
+
+  &:not(:last-child) {
+    margin: 0 24px 0 0;
+  }
+
+  &:hover {
+    color: $gray-extra-dark;
+  }
+
+  &.active {
+    font-weight: bold;
+    color: $gray-extra-dark;
+  }
+}
+
+.auth__contents {
+  position: relative;
+  overflow: hidden;
+}
+
+.auth__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition-timing-function: $transition-timing-function;
+  transition-duration: $transition-duration;
+  transition-property: visibility, opacity;
+
+  &.active {
+    position: static;
+    visibility: visible;
+    opacity: 1;
+  }
+}

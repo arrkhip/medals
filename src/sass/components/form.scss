@@ -1,5 +1,6 @@
 .form {
   position: relative;
+  text-align: left;
 }
 
 .form__title {
@@ -178,6 +179,11 @@
   display: grid;
   grid-template-columns: 90px 1fr;
   align-items: center;
+
+  &--vertical {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
 }
 
 .form__row-label {
@@ -195,6 +201,53 @@
   flex-direction: column;
 }
 
+.form__remember {
+  margin: 24px 0 0 0;
+
+  &-hidden {
+    max-height: 0;
+    overflow: hidden;
+    transition-timing-function: $transition-timing-function;
+    transition-duration: $transition-duration;
+    transition-property: max-height;
+  }
+
+  &-inner {
+    padding: 14px 0 0 0;
+    font-size: 0.875rem;
+    line-height: 1.43;
+    color: $gray-extra-dark;
+  }
+
+  &-button {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 6px 0 0 0;
+    color: $main;
+    background: none;
+    border: none;
+    transition-timing-function: $transition-timing-function;
+    transition-duration: $transition-duration;
+    transition-property: color;
+
+    &:hover {
+      color: darken($main, 20%);
+    }
+  }
+
+  &-svg {
+    display: inline-block;
+    width: 1rem;
+    min-width: 1rem;
+    height: 1rem;
+    min-height: 1rem;
+    margin: 0 0 0 4px;
+    stroke: currentColor;
+    transform: rotate(180deg);
+  }
+}
+
 .form__submit {
   display: flex;
   flex-direction: column;
@@ -203,6 +256,13 @@
   .button {
     cursor: pointer;
   }
+}
+
+.form__link {
+  margin: 16px 0 0 0;
+  font-size: 0.875rem;
+  line-height: 1;
+  text-align: center;
 }
 
 .form__policy {
@@ -241,5 +301,13 @@
 }
 
 .form__message-text {
+  text-align: center;
+}
+
+.form__text {
+  margin: 16px 0 0 0;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  color: $gray-extra-dark;
   text-align: center;
 }

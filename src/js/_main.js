@@ -13,6 +13,9 @@ import './modules/Swap';
 import './modules/FormHiding';
 import './modules/Player';
 import './modules/Tab';
+import './modules/Drawer';
+import './modules/Modal';
+import './modules/Accordion';
 
 // sliders
 import './modules/sliders/banner';

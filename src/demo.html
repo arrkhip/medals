@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <title>Main</title>
+</head>
+
+<body>
+  <main>
+    <div class="container" style="padding-top: 60px; padding-bottom: 60px;">
+      <button class="button" data-drawer-target="#drawer-partner">Партнер</button>
+      <button class="button" data-drawer-target="#drawer-video">Видео</button>
+      <button class="button" data-drawer-target="#drawer-terms">Условия</button>
+      <button class="button" data-modal-target="#modal-auth">Авторизация</button>
+      <button class="button" data-modal-target="#modal-forgotten">Восстановление</button>
+    </div>
+  </main>
+
+  ${require('./templates/modals/partner.html')}
+  ${require('./templates/modals/video.html')}
+  ${require('./templates/modals/terms.html')}
+  ${require('./templates/modals/auth.html')}
+  ${require('./templates/modals/forgotten.html')}
+</body>
+
+</html>

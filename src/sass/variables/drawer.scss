@@ -1,28 +1,24 @@
-.modal-wrapper {
+.drawer-wrapper {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 8;
   display: block;
   width: 100vw;
   height: 100vh;
-  padding: 20px;
+  padding: 0;
   overflow: auto;
   overflow-x: hidden;
   overflow-y: auto;
   font-size: 0;
-  text-align: center;
+  text-align: right;
   white-space: nowrap;
   visibility: hidden;
-  background-color: rgba($black, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   opacity: 0;
   transition-timing-function: $transition-timing-function;
   transition-duration: $transition-duration * 2;
   transition-property: visibility, opacity;
-
-  @media (max-width: 768px) {
-    padding: 15px;
-  }
 
   &::before {
     display: inline-block;
@@ -35,47 +31,64 @@
     visibility: visible;
     opacity: 1;
 
-    .modal {
+    .drawer {
       opacity: 1;
-      transform: scale(1);
+      transform: translateX(0);
     }
   }
 
-  .modal {
+  .drawer {
     position: relative;
-    z-index: 11;
+    z-index: 9;
     display: inline-block;
     width: 100%;
-    max-width: 568px;
-    padding: 80px 96px;
+    max-width: 954px;
+    height: 100%;
     font-size: 1rem;
     text-align: center;
     white-space: normal;
     vertical-align: middle;
     background-color: $white;
-    border-radius: 4px;
-    box-shadow: 0 4px 20px rgba($black, 0.1);
     opacity: 0;
     transition-timing-function: $transition-timing-function;
     transition-duration: $transition-duration * 2;
     transition-property: transform, opacity;
-    transform: scale(0.6);
+    transform: translateX(100%);
+
+    @include max-width(768px) {
+      max-width: 100%;
+    }
   }
 
-  .modal__close {
+  .drawer__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 56px 8px 8px 56px;
+    text-align: left;
+  }
+
+  .drawer__close {
     position: absolute;
-    top: 8px;
-    right: 8px;
+    top: 6px;
+    right: 6px;
   }
 
-  .modal__title {
-    margin: 0 0 16px 0;
+  .drawer__content {
+    flex: 1;
+    padding: 0 48px 48px 0;
+    overflow: auto;
+
+    @include scrollbar(4px, $gray-light, #e8e8e8, 2px);
+
+    @include max-width(600px) {
+      padding: 0 15px;
+    }
   }
 
-  .modal__subtitle {
+  .drawer__title {
     margin: 0 0 16px 0;
-    font-size: 0.875rem;
-    line-height: 1.43;
-    color: $gray-dark;
   }
 }

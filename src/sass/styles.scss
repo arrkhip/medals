@@ -12,6 +12,7 @@
 @import 'variables/global';
 @import 'variables/typography';
 @import 'variables/modals';
+@import 'variables/drawer';
 @import 'variables/UI';
 
 // Components - Компоненты
@@ -23,6 +24,10 @@
 @import 'sections/content';
 @import 'sections/info';
 @import 'sections/aside';
+@import 'sections/partner';
+@import 'sections/video';
+@import 'sections/terms';
+@import 'sections/auth';
 
 // Blocks - Блоки
 @import 'blocks/main-block';
