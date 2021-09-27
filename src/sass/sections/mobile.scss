@@ -1,0 +1,13 @@
+.mobile {
+  position: relative;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba($black, 0.1);
+
+  @include min-width(1025px) {
+    display: none;
+  }
+}
+
+.mobile__wrapper {
+  margin: 0 -15px;
+}

@@ -8,8 +8,20 @@
 .banner__wrapper {
   height: 580px;
 
+  @include max-width(1200px) {
+    height: 500px;
+  }
+
+  @include max-width(1024px) {
+    height: 420px;
+  }
+
   .with-aside & {
-    margin-right: 375px;
+    margin-right: 405px;
+
+    @include max-width(1024px) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -38,6 +50,10 @@
   .swiper-button-prev,
   .swiper-button-next {
     top: calc(100% - 38px);
+
+    @include max-width(1024px) {
+      display: none;
+    }
   }
 
   .swiper-button-prev {
@@ -47,5 +63,24 @@
 
   .swiper-button-next {
     right: 48px;
+  }
+}
+
+.banner__image {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+
+  @include min-width(1025px) {
+    &--mobile {
+      display: none;
+    }
+  }
+
+  @include max-width(1024px) {
+    &:not(&--mobile) {
+      display: none;
+    }
   }
 }

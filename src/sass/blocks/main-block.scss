@@ -15,6 +15,10 @@
   display: block;
   margin: 0 0 24px 0;
 
+  @include max-width(1024px) {
+    display: none;
+  }
+
   img {
     display: block;
     max-width: 100%;

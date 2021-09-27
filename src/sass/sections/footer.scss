@@ -1,0 +1,151 @@
+.footer {
+  padding: 48px 0 24px 0;
+  background: #231f20;
+
+  @include max-width(1024px) {
+    padding: 24px 0;
+  }
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 24px 0;
+
+  @include max-width(1024px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 12px 0;
+
+    &-block {
+      max-width: 300px;
+    }
+
+    &-block + &-block {
+      margin: 24px 0 0 0;
+    }
+  }
+}
+
+.footer__info {
+  font-size: 0.75rem;
+  line-height: 1.33;
+  color: $white;
+
+  @include max-width(1024px) {
+    text-align: center;
+  }
+
+  p:nth-child(1) {
+    margin: 0 0 12px 0;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.29;
+  }
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  margin: 18px 0 0 0;
+
+  $social: &;
+
+  &-item {
+    display: block;
+  }
+
+  &-item + &-item {
+    margin: 0 0 0 16px;
+  }
+
+  &-svg {
+    display: block;
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
+    min-height: 36px;
+    transition: transform $transition-timing-function $transition-duration / 4;
+
+    #{$social}-item:hover & {
+      transform: translateY(-4px);
+    }
+  }
+}
+
+.footer__contacts {
+  &-item {
+    display: flex;
+    color: $white;
+  }
+
+  &-item + &-item {
+    margin: 8px 0 0 0;
+  }
+
+  &-icon {
+    width: 24px;
+    margin: 0 12px 0 0;
+  }
+
+  &-svg {
+    display: block;
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    min-height: 24px;
+    stroke: $white;
+  }
+
+  &-link {
+    margin: 0 0 4px 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: inherit;
+  }
+
+  &-text {
+    font-size: 0.875rem;
+    line-height: 1.29;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0 0 0;
+  margin: 18px 0 0 0;
+  border-top: 1px solid rgba($white, 0.1);
+
+  @include max-width(1024px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 15px 0 15px;
+    margin: 12px -15px 0 -15px;
+
+    &-block {
+      max-width: 300px;
+    }
+
+    &-block + &-block {
+      margin: 24px 0 0 0;
+    }
+  }
+}
+
+.footer__copyright {
+  font-size: 0.875rem;
+  line-height: 1.29;
+  color: $main-light;
+}

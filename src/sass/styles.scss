@@ -20,6 +20,9 @@
 @import 'components/form';
 
 // Sections - Разделы сайта
+@import 'sections/header';
+@import 'sections/menu';
+@import 'sections/footer';
 @import 'sections/banner';
 @import 'sections/content';
 @import 'sections/info';
@@ -28,6 +31,7 @@
 @import 'sections/video';
 @import 'sections/terms';
 @import 'sections/auth';
+@import 'sections/mobile';
 
 // Blocks - Блоки
 @import 'blocks/main-block';

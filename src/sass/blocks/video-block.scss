@@ -1,3 +1,9 @@
+.video-block {
+  @include max-width(1024px) {
+    padding: 0 15px;
+  }
+}
+
 .video-block__wrapper {
   --plyr-color-main: #ac003e;
   --plyr-control-icon-size: 20px;

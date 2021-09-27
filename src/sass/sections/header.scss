@@ -1,0 +1,37 @@
+.header {
+  background: $white;
+
+  @include min-width(1025px) {
+    display: none;
+  }
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.header__logo {
+  display: block;
+
+  img {
+    display: block;
+  }
+}
+
+.header__menu {
+  padding: 0;
+  background: none;
+  border: none;
+
+  &-svg {
+    display: block;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    min-height: 40px;
+    stroke: $black;
+  }
+}

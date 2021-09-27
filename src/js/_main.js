@@ -8,6 +8,7 @@ import './modules/polyfills/forEach';
 import './modules/polyfills/closest';
 
 // modules
+import './modules/Menu';
 import './modules/Mask';
 import './modules/Swap';
 import './modules/FormHiding';
@@ -16,6 +17,7 @@ import './modules/Tab';
 import './modules/Drawer';
 import './modules/Modal';
 import './modules/Accordion';
+import './modules/Scroll';
 
 // sliders
 import './modules/sliders/banner';

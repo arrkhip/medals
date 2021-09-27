@@ -1,12 +1,21 @@
 .info {
   .with-aside & {
     margin: -56px 0 0 0;
+
+    @include max-width(1024px) {
+      margin: 0;
+    }
   }
 }
 
 .info__tabs {
   display: flex;
   margin: 0 0 56px 0;
+
+  @include max-width(1024px) {
+    display: none;
+    margin: 0;
+  }
 }
 
 .info__tab {
@@ -48,6 +57,12 @@
     visibility: visible;
     opacity: 1;
   }
+
+  @include max-width(1024px) {
+    position: static;
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 .info__block {
@@ -84,6 +99,10 @@
   td:nth-child(1) {
     width: 280px;
 
+    @include max-width(1024px) {
+      max-width: 140px;
+    }
+
     span {
       position: relative;
       display: inline-block;
@@ -112,4 +131,104 @@
 .info__title {
   margin: 0 0 16px 0;
   color: $gray-extra-dark;
+}
+
+.info__mobile {
+  @include min-width(1025px) {
+    display: none;
+  }
+
+  &-title {
+    margin: 0 0 20px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1;
+    color: $gray-extra-dark;
+    text-align: center;
+  }
+
+  &-gap {
+    padding-bottom: 40px;
+  }
+}
+
+.info__accordion {
+  display: flex;
+  flex-direction: column;
+
+  $accordion: &;
+
+  @include max-width(1024px) {
+    padding: 0 15px;
+    margin: 0 -15px;
+    border-bottom: 1px solid #e1e1e1;
+
+    &--first {
+      border-top: 1px solid #e1e1e1;
+    }
+  }
+
+  &-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    color: $gray-extra-dark;
+    background: none;
+    border: none;
+    transition-timing-function: $transition-timing-function;
+    transition-duration: $transition-duration;
+    transition-property: color;
+
+    @include min-width(1025px) {
+      display: none;
+    }
+
+    &:hover {
+      color: $second;
+    }
+  }
+
+  &-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2;
+    color: currentColor;
+  }
+
+  &-icon {
+    margin: 0 0 0 12px;
+  }
+
+  &-svg {
+    display: block;
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    min-height: 24px;
+    stroke: $second;
+    transition-timing-function: $transition-timing-function;
+    transition-duration: $transition-duration;
+    transition-property: transform;
+
+    #{$accordion}.active & {
+      transform: rotateX(180deg);
+    }
+  }
+
+  &-hidden {
+    @include max-width(1024px) {
+      max-height: 0;
+      overflow: hidden;
+      transition-timing-function: $transition-timing-function;
+      transition-duration: $transition-duration;
+      transition-property: max-height;
+    }
+  }
+
+  &-content {
+    @include max-width(1024px) {
+      padding: 0 0 8px 0;
+    }
+  }
 }
