@@ -1,0 +1,92 @@
+.social {
+  padding: 60px 0;
+  background-color: $gray-extra-light;
+  background-image: url('../img/social-bg-1.png'), url('../img/social-bg-2.png');
+  background-repeat: no-repeat;
+  background-position: center left, center right;
+
+  @include max-width(1024px) {
+    padding: 40px 0;
+    background-image: none;
+  }
+}
+
+.social__title {
+  margin: 0 0 40px 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1;
+  color: $gray-extra-dark;
+
+  @include max-width(1024px) {
+    margin: 0 0 24px 0;
+  }
+}
+
+.social__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  @include max-width(1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.social__item {
+  --social-item-background: radial-gradient(104.96% 308.44% at 83.64% 0%, #ebd493 0%, #9e8650 62.99%, #9e8650 100%);
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background: $white;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba($black, 0.1);
+
+  &-top {
+    height: 48px;
+    background: var(--social-item-background);
+  }
+
+  &-icon {
+    display: block;
+    margin: -26px auto 16px auto;
+  }
+
+  &-content {
+    padding: 0 16px;
+    margin: 0 0 20px 0;
+  }
+
+  &-text {
+    margin: 0 0 20px 0;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.43;
+    color: $gray-extra-dark;
+    text-align: center;
+  }
+
+  &-bottom {
+    height: 8px;
+    margin: auto 0 0 0;
+    background: var(--social-item-background);
+  }
+
+  &--facebook {
+    --social-item-background: radial-gradient(104.96% 308.44% at 83.64% 0%, #3d89e3 0%, #0c68d4 62.99%);
+  }
+
+  &--vk {
+    --social-item-background: radial-gradient(109.74% 322.48% at 78.86% -37.5%, #5ca7fd 0%, #2787f5 62.99%);
+  }
+
+  &--ok {
+    --social-item-background: radial-gradient(109.74% 322.48% at 78.86% -37.5%, #f9ae59 0%, #ee8207 62.99%);
+  }
+
+  &--instagram {
+    --social-item-background: radial-gradient(109.74% 322.48% at 78.86% -37.5%, #f13a59 0%, #6044e1 62.99%);
+  }
+}
