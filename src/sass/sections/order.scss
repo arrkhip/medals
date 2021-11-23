@@ -52,7 +52,7 @@
 .order__wrapper {
   display: grid;
   grid-template-columns: 1fr 375px;
-  gap: 60px;
+  gap: 50px;
   padding: 60px 0;
 
   @include max-width(1100px) {
@@ -63,6 +63,50 @@
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 40px 0;
+  }
+
+  &--gap-sm {
+    gap: 26px;
+  }
+
+  &--pt-sm {
+    padding-top: 32px;
+
+    @include max-width($phone) {
+      padding-top: 16px;
+    }
+  }
+}
+
+.order__topic {
+  display: flex;
+  align-items: flex-start;
+
+  @include max-width($phone) {
+    flex-direction: column;
+  }
+
+  &-img {
+    flex: 0 0 179px;
+    height: 179px;
+    margin-right: 31px;
+
+    @include max-width($phone) {
+      flex: 0 0 170px;
+      height: 170px;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-button {
+    margin-top: 24px;
   }
 }
 
@@ -145,6 +189,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+
+    @include max-width($phone) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &-item {
@@ -153,6 +201,10 @@
 
     &--big {
       grid-column: span 2;
+
+      @include max-width($phone) {
+        grid-column: auto;
+      }
     }
   }
 
@@ -188,36 +240,55 @@
     color: $black;
 
     p {
+      // position: relative;
       display: flex;
       align-items: flex-end;
+      justify-content: space-between;
+
+      // &::after {
+      //   position: absolute;
+      //   bottom: 0.36em;
+      //   width: 100%;
+      //   content: '';
+      //   border-bottom: 1px dashed #e0e0e0;
+      // }
     }
 
     p + p {
       margin: 12px 0 0 0;
     }
 
+    span {
+      position: relative;
+      z-index: 1;
+      background-color: $white;
+    }
+
     span:nth-child(1) {
       position: relative;
       display: inline-block;
       flex: 1;
+      padding-right: 10px;
       overflow: hidden;
       color: $gray;
       vertical-align: bottom;
 
       &::after {
         position: absolute;
+        right: -10px;
         bottom: 0.36em;
-        width: 100%;
+        width: calc(100% - 16px);
         content: '';
         border-bottom: 1px dashed #e0e0e0;
       }
     }
 
     span:nth-child(2) {
-      min-width: 100px;
+      min-width: 182px;
+      padding-left: 10px;
 
       @include max-width(1024px) {
-        min-width: 80px;
+        min-width: 107px;
       }
     }
   }
@@ -240,7 +311,7 @@
     }
 
     span:nth-child(2) {
-      min-width: 100px;
+      min-width: 171px;
       font-size: 1.25rem;
       font-weight: 600;
       line-height: 1.2;
@@ -256,5 +327,69 @@
 .order__aside {
   @include max-width(1024px) {
     margin: 0 -15px;
+  }
+
+  &--mobile-hidden {
+    @include max-width(1024px) {
+      display: none;
+    }
+  }
+}
+
+// для страниц с ошибками
+.order {
+  &--full-height {
+    height: 100%;
+  }
+}
+
+.order__message {
+  height: calc(100% - 93px);
+
+  &-container {
+    height: 100%;
+  }
+
+  &-topic {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 954px;
+    height: 100%;
+    padding: 60px 0;
+    margin: 0 auto;
+
+    @include max-width(768px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .order__topic-img {
+    @include max-width(768px) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.order__headline {
+  &--top-offset {
+    margin-top: 64px;
+
+    @include max-width($phone) {
+      margin-top: 16px;
+    }
+  }
+}
+
+.order__page-title {
+  @include max-width($phone) {
+    font-size: 2.46rem;
+    text-align: center;
+  }
+
+  @include max-width(359px) {
+    font-size: 2.1rem;
   }
 }

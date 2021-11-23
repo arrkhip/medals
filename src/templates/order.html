@@ -21,17 +21,24 @@
     <div class="order__wrapper">
       <!-- content -->
       <div class="order__content">
-        <h1 class="order__title h4"><img src="../img/check-medal-big.png">Ваш заказ №188288282-8 успешно оформлен!</h1>
-        <!-- description -->
-        <div class="order__description">
-          <p>Детали заказа отправлены на указанный e-mail: <a href="#">allageorgievna1867</a>.</p>
-          <p>Вы можете отслживать статус заказав своемличном кабинете в разделе <a href="#">Заказы</a></p>
-          <p>Оператор свяжется с вами для подтверждения заказа в ближайшее время.</p>
+        <div class="order__topic">
+          <div class="order__topic-img">
+            <img src="../img/order-img.png" alt="">
+          </div>
+          <div class="order__topic-info">
+            <h1 class="order__title h4">Ваш заказ №188288282-8 успешно оформлен!</h1>
+            <!-- description -->
+            <div class="order__description">
+              <p>Детали заказа отправлены на указанный e-mail: <a href="#">allageorgievna1867</a>.</p>
+              <p>Вы можете отслживать статус заказав своемличном кабинете в разделе <a href="#">Заказы</a></p>
+              <p>Оператор свяжется с вами для подтверждения заказа в ближайшее время.</p>
+            </div>
+          </div>
         </div>
         <!-- ./ End of description -->
         <!-- block -->
         <div class="order__block">
-          <p class="order__block-title">Данные получателя</p>
+          <p class="order__block-title">Получатель</p>
           <!-- recipient -->
           <div class="order__recipient">
             <p class="order__recipient-name">Константинопольский Александр </p>
@@ -73,7 +80,26 @@
         <!-- ./ End of block -->
         <!-- block -->
         <div class="order__block">
-          <p class="order__block-title">Данные о заказе</p>
+          <p class="order__block-title">Доставка и оплата</p>
+          <!-- info -->
+          <div class="order__info">
+            <div class="order__info-list">
+              <p>
+                <span>Оплата</span>
+                <span>При получении</span>
+              </p>
+              <p>
+                <span>Доставка</span>
+                <span>Почтой России</span>
+              </p>
+            </div>
+          </div>
+          <!-- ./ End of info -->
+        </div>
+        <!-- ./ End of block -->
+        <!-- block -->
+        <div class="order__block">
+          <p class="order__block-title">О заказе</p>
           <!-- info -->
           <div class="order__info">
             <div class="order__info-list">
@@ -103,8 +129,8 @@
       <!-- ./ End of content -->
       <!-- aside -->
       <aside class="order__aside">
-        ${require('./blocks/guarantees.html')}
         ${require('./blocks/banner.html')}
+        ${require('./blocks/guarantees.html')}
       </aside>
       <!-- ./ End of aside -->
     </div>
