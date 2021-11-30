@@ -92,3 +92,31 @@
     margin: 0 0 16px 0;
   }
 }
+
+// отдельно адаптив для нескольких бандлов...
+@media (max-width: 900px) {
+  .drawer-wrapper {
+    .drawer__inner {
+      padding: 40px 8px 16px 16px;
+    }
+
+    .drawer__content {
+      padding: 0 8px 0 0;
+    }
+
+    .terms__list {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 16px;
+    }
+
+    .terms__list-icon {
+      margin: 0 12px 0 0;
+    }
+
+    .terms__list-image {
+      max-width: 32px;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+}
