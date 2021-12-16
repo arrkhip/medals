@@ -1,368 +1,400 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Main</title>
+  </head>
 
-<head>
-  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-  <title>Main</title>
-</head>
-
-<body>
-  <main>
-    <!-- order -->
-    <section class="order">
-      <!-- header -->
-      <header class="order__header">
+  <body>
+    <main>
+      <!-- order -->
+      <section class="order">
+        <!-- header -->
+        <header class="order__header">
+          <div class="container">
+            <div class="order__header-wrapper">
+              <a href="#" class="order__header-back">🠔 Назад к описанию</a>
+              <a href="#" class="order__header-logo">
+                <img src="img/logo.svg" />
+              </a>
+              <div class="order__header-contacts">
+                <a href="tel:+74959742977">+7 (495) 974-29-77</a>
+                <p>Пн-Вс 9:00-21:00 (МСК)</p>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- ./ End of header -->
         <div class="container">
-          <div class="order__header-wrapper">
-            <a href="#" class="order__header-back">🠔 Назад к описанию</a>
-            <a href="#" class="order__header-logo">
-              <img src="img/logo.svg">
-            </a>
-            <div class="order__header-contacts">
-              <a href="tel:+74959742977">+7 (495) 974-29-77</a>
-              <p>Пн-Вс 9:00-21:00 (МСК)</p>
-            </div>
+          <div class="order__headline order__headline--top-offset">
+            <h1 class="h4">Заказать памятную медаль</h1>
           </div>
-        </div>
-      </header>
-      <!-- ./ End of header -->
-      <div class="container">
-        <div class="order__headline order__headline--top-offset">
-          <h1 class="h4">Заказать памятную медаль</h1>
-        </div>
-        <!-- wrapper -->
-        <div class="order__wrapper order__wrapper--gap-sm order__wrapper--pt-sm">
-          <!-- content -->
-          <div class="order__content">
 
-            <form action="">
+          <form class="j_stepsController">
+            <!-- wrapper -->
+            <div class="order__wrapper order__wrapper--gap-sm order__wrapper--pt-sm">
+              <!-- content -->
+              <div class="order__content">
+                <!-- Start STEP 1 -->
+                <div data-keys="Заказчик: ||Телефон:" class="order-step j_step">
+                  <div class="order-step__header">
+                    <div class="order-step__point">
+                      <em> 1 </em>
 
-              <!-- Start STEP 1 -->
-              <div class="order-step">
-                <div class="order-step__header">
-                  <div class="order-step__point order-step__point--active">1</div>
-                  <h5 class="h5">Контактные данные</h5>
+                      <svg class="order-step__point-icon">
+                        <use xlink:href="#done"></use>
+                      </svg>
+                    </div>
+
+                    <h5 class="h5">Контактные данные</h5>
+
+                    <a href="#" class="order-step__edit j_stepEdit">
+                      <svg class="order-step__edit-icon">
+                        <use xlink:href="#edit"></use>
+                      </svg>
+                      <span class="order-step__edit-text">Изменить</span>
+                    </a>
+                    <div class="order-step__personal j_stepInfo"></div>
+                  </div>
+
+                  <div class="order-step__body">
+                    <p class="order-step__message"
+                      >У вас есть личный кабинет? <a href="#">Войдите</a> для быстрого заполнения формы</p
+                    >
+                  </div>
+                  <div class="order-step__form form-order">
+                    <div class="form-order__grid">
+                      <div class="form-order__item">
+                        <div class="form-order__label">
+                          <label for="">Имя<em>*</em></label>
+                        </div>
+                        <div class="form-order__input">
+                          <input data-key="Заказчик" type="text" class="input" data-required />
+                        </div>
+                      </div>
+
+                      <div class="form-order__item">
+                        <div class="form-order__label">
+                          <label for="">Фамилия<em>*</em></label>
+                        </div>
+                        <div class="form-order__input">
+                          <input data-key="Заказчик" type="text" class="input" data-required />
+                        </div>
+                      </div>
+
+                      <div class="form-order__item">
+                        <div class="form-order__label">
+                          <label for="">Телефон<em>*</em></label>
+                        </div>
+                        <div class="form-order__input">
+                          <input data-key="Телефон" type="text" class="input" data-required />
+                        </div>
+                      </div>
+
+                      <div class="form-order__item form-order__item--full">
+                        <button class="form-order__button button">ДАЛЕЕ</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <!-- End of STEP 1 -->
 
-                <div class="order-step__body">
-                  <p class="order-step__message">У вас есть личный кабинет? <a href="#">Войдите</a> для быстрого
-                    заполнения формы</p>
+                <!-- Start STEP 2 -->
+                <div data-keys="Адрес:, ||Индекс:||Доставка: ||Комментарий: " class="order-step j_step">
+                  <div class="order-step__header">
+                    <div class="order-step__point">
+                      <em> 2 </em>
+
+                      <svg class="order-step__point-icon">
+                        <use xlink:href="#done"></use>
+                      </svg>
+                    </div>
+                    <h5 class="order-step__title h5">Адрес и способ доставки</h5>
+
+                    <a href="#" class="order-step__edit j_stepEdit">
+                      <svg class="order-step__edit-icon">
+                        <use xlink:href="#edit"></use>
+                      </svg>
+                      <span class="order-step__edit-text">Изменить</span>
+                    </a>
+                    <div class="order-step__personal j_stepInfo"></div>
+                  </div>
+                  <!-- <div class="order-step__body"> -->
+                  <div class="order-step__form form-order">
+                    <div class="form-order__grid">
+                      <div class="form-order__item">
+                        <div class="form-order__label">
+                          <label for="city">Город<em>*</em></label>
+                        </div>
+                        <div class="form-order__input">
+                          <input data-key="Адрес" type="text" id="city" value="Тамбов" class="input" data-required />
+                        </div>
+                      </div>
+
+                      <div class="form-order__item">
+                        <div class="form-order__label">
+                          <label for="street">Улица<em>*</em></label>
+                        </div>
+                        <div class="form-order__input">
+                          <input
+                            data-key="Адрес"
+                            type="text"
+                            value="Набережная"
+                            id="street"
+                            class="input"
+                            data-required
+                          />
+                        </div>
+                      </div>
+
+                      <div class="form-order__item">
+                        <div class="form-order__label">
+                          <label for="house">Дом<em>*</em></label>
+                        </div>
+                        <div class="form-order__input">
+                          <input data-key="Адрес" type="text" id="house" value="28/4" class="input" data-required />
+                        </div>
+                      </div>
+
+                      <div class="form-order__item">
+                        <div class="form-order__label">
+                          <label for="room">Квартира</label>
+                        </div>
+                        <div class="form-order__input">
+                          <input data-key="Адрес" type="text" value="126" id="room" class="input" />
+                        </div>
+                      </div>
+
+                      <div class="form-order__item ">
+                        <div class="form-order__label">
+                          <label for="postcode">Почтовый индекс<em>*</em></label>
+                        </div>
+                        <div class="form-order__input">
+                          <input
+                            data-key="Индекс"
+                            type="text"
+                            value="392002"
+                            id="postcode"
+                            class="input"
+                            data-required
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-order__subtitle">Выберите способ доставки</div>
+
+                    <div class="form-order__grid">
+                      <div class="form-order__item">
+                        <div class="form-order__radio">
+                          <input
+                            data-key="Доставка"
+                            value="почтой Росии - 399 ₽"
+                            type="radio"
+                            name="delivery"
+                            id="delivery-1"
+                            data-required
+                          />
+                          <label for="delivery-1" class="form-order__radio-label">
+                            <span>Доставка почтой Росии</span>
+                            <b>399 ₽</b>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form-order__item">
+                        <div class="form-order__radio">
+                          <input
+                            data-key="Доставка"
+                            value="курьером - 600 ₽"
+                            type="radio"
+                            name="delivery"
+                            id="delivery-2"
+                            data-required
+                          />
+                          <label for="delivery-2" class="form-order__radio-label">
+                            <span>Доставка курьером</span>
+                            <b>600 ₽</b>
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="form-order__item form-order__item--mobile-column">
+                        <div class="form-order__label">
+                          <label for="time">Время доставки </label>
+                        </div>
+                        <div class="form-order__input">
+                          <select data-key="Доставка" name="" id="time" class="input" data-required>
+                            <option value="">Выберите из списка</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="13:00">13:00</option>
+                            <option value="14:00">14:00</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-order__item form-order__item--full form-order__item--mobile-column">
+                        <div class="form-order__label">
+                          <label for="massega">Ваш комментарий:</label>
+                        </div>
+                        <div class="form-order__textarea">
+                          <textarea data-key="Комментарий" id="massega" class="textarea"></textarea>
+                        </div>
+                      </div>
+                      <div class="form-order__item form-order__item--full">
+                        <button class="js_form-order__button form-order__button button">ДАЛЕЕ</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="order-step__form form-order">
-                  <div class="form-order__grid">
+                <!-- End of STEP 2 -->
 
-                    <div class="form-order__item">
-                      <div class="form-order__label">
-                        <label for="">Имя<em>*</em></label>
+                <!-- Start STEP 3 -->
+                <div data-keys="Оплата: " class="order-step j_step">
+                  <div class="order-step__header">
+                    <div class="order-step__point">
+                      <em> 3 </em>
+
+                      <svg class="order-step__point-icon">
+                        <use xlink:href="#done"></use>
+                      </svg>
+                    </div>
+                    <h5 class="order-step__title h5">Способ оплаты</h5>
+
+                    <a href="#" class="order-step__edit j_stepEdit">
+                      <svg class="order-step__edit-icon">
+                        <use xlink:href="#edit"></use>
+                      </svg>
+                      <span class="order-step__edit-text">Изменить</span>
+                    </a>
+                    <div class="order-step__personal j_stepInfo"></div>
+                  </div>
+
+                  <div class="order-step__form form-order">
+                    <div class="order-step__payment">
+                      <div class="order-step__payment-wrap">
+                        <div class="order-step__payment-item">
+                          <label class="order-step__payment-label">
+                            <input
+                              data-key="Оплата"
+                              value="картой онлайн"
+                              class="order-step__payment-input"
+                              type="radio"
+                              name="payment"
+                              data-required
+                            />
+                            <div class="order-step__payment-block">
+                              <div class="order-step__payment-box"></div>
+                              <div class="order-step__payment-row">
+                                <div class="order-step__payment-image">
+                                  <img src="img/payment-1.png" />
+                                </div>
+                                <div class="order-step__payment-text">
+                                  <span>Оплата картой онлайн</span>
+                                </div>
+                              </div>
+                            </div>
+                          </label>
+                        </div>
+
+                        <div class="order-step__payment-item">
+                          <label class="order-step__payment-label">
+                            <input
+                              data-key="Оплата"
+                              value="при получении"
+                              class="order-step__payment-input"
+                              type="radio"
+                              name="payment"
+                              data-required
+                            />
+                            <div class="order-step__payment-block">
+                              <div class="order-step__payment-box"></div>
+                              <div class="order-step__payment-row">
+                                <div class="order-step__payment-image">
+                                  <img src="img/payment-2.png" />
+                                </div>
+                                <div class="order-step__payment-text">
+                                  <span>Оплата при получении</span>
+                                </div>
+                              </div>
+                            </div>
+                          </label>
+                        </div>
                       </div>
-                      <div class="form-order__input">
-                        <input data-key="Имя:" type="text" class="input" required>
+
+                      <div class="order-step__payment-wrap">
+                        <div class="order-step__payment-item">
+                          <label class="order-step__payment-label order-step__payment-label--gold">
+                            <input
+                              data-key="Оплата"
+                              value="Сбербанк подписка"
+                              class="order-step__payment-input"
+                              type="radio"
+                              name="payment"
+                              data-required
+                            />
+                            <div class="order-step__payment-block">
+                              <div class="order-step__payment-box"></div>
+                              <div class="order-step__payment-row">
+                                <div class="order-step__payment-image">
+                                  <img src="img/payment-4.png" />
+                                </div>
+                              </div>
+                              <div class="order-step__payment-row">
+                                <a href="#">Посмотреть условия подписки ➝</a>
+                              </div>
+                            </div>
+                          </label>
+                        </div>
                       </div>
                     </div>
-
-                    <div class="form-order__item">
-                      <div class="form-order__label">
-                        <label for="">Фамилия<em>*</em></label>
-                      </div>
-                      <div class="form-order__input">
-                        <input data-key="Фамилия:" type="text" class="input" required>
-                      </div>
-                    </div>
-
-                    <div class="form-order__item">
-                      <div class="form-order__label">
-                        <label for="">Телефон<em>*</em></label>
-                      </div>
-                      <div class="form-order__input">
-                        <input data-key="Телефон:" type="text" class="input" required>
-                      </div>
-                    </div>
-
                     <div class="form-order__item form-order__item--full">
-                      <button class="form-order__button button">ДАЛЕЕ</button>
+                      <button class="js_form-order__button form-order__button button">ДАЛЕЕ</button>
                     </div>
+                  </div>
+                </div>
+                <!-- End of STEP 3 -->
+
+                <!-- Кнопка оплатить появляется после заполнения всех шагов -->
+                <div class="form-order-finish j_step">
+                  <button class="button order-step__button-pay j_stepSubmit">оплатить</button>
+
+                  <div class="order-step__policy">
+                    <label class="checkbox">
+                      <input data-required class="checkbox__input" type="checkbox" />
+                      <div class="checkbox__custom">
+                        <svg class="checkbox__icon">
+                          <use xlink:href="#done"></use>
+                        </svg>
+                      </div>
+                      <span class="checkbox__text">
+                        Я согласен с <a href="#" class="checkbox__link">условиями</a> заказа медали, в том числе с
+                        <a href="#" class="checkbox__link">Соглашением об условиях заказа</a> и с
+                        <a href="#" class="checkbox__link">Политикой обработки персональных данных</a>
+                      </span>
+                    </label>
                   </div>
                 </div>
               </div>
-              <!-- End of STEP 1 -->
-
-              <!-- Start STEP 2 -->
-              <div class="order-step current">
-                <div class="order-step__header">
-                  <div class="order-step__point order-step__point--active">2</div>
-                  <h5 class="order-step__title h5">Адрес и способ доставки</h5>
-                </div>
-                <!-- <div class="order-step__body"> -->
-                <div class="order-step__form form-order">
-                  <div class="form-order__grid">
-
-                    <div class="form-order__item">
-                      <div class="form-order__label">
-                        <label for="city">Город<em>*</em></label>
-                      </div>
-                      <div class="form-order__input">
-                        <input data-key="Город:" type="text" id="city" value="Тамбов" class="input" required>
-                      </div>
-                    </div>
-
-                    <div class="form-order__item">
-                      <div class="form-order__label">
-                        <label for="street">Улица<em>*</em></label>
-                      </div>
-                      <div class="form-order__input">
-                        <input data-key="Улица:" type="text" value="Набережная" id="street" class="input" required>
-                      </div>
-                    </div>
-
-                    <div class="form-order__item">
-                      <div class="form-order__label">
-                        <label for="house">Дом<em>*</em></label>
-                      </div>
-                      <div class="form-order__input">
-                        <input data-key="Дом:" type="text" id="house" value="28/4" class="input" required>
-                      </div>
-                    </div>
-
-                    <div class="form-order__item">
-                      <div class="form-order__label">
-                        <label for="room">Квартира</label>
-                      </div>
-                      <div class="form-order__input">
-                        <input data-key="Квартира:" type="text" value="126" id="room" class="input">
-                      </div>
-                    </div>
-
-                    <div class="form-order__item ">
-                      <div class="form-order__label">
-                        <label for="postcode">Почтовый индекс<em>*</em></label>
-                      </div>
-                      <div class="form-order__input">
-                        <input data-key="Почтовый индек:" type="text" value="392002" id="postcode" class="input"
-                          required>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="form-order__subtitle">Выберите способ доставки</div>
-
-                  <div class="form-order__grid">
-                    <div class="form-order__item">
-                      <div class="form-order__radio">
-                        <input data-key="Cпособ доставки:" value="Доставка почтой Росии - 399 ₽" type="radio"
-                          name="delivery" id="delivery-1">
-                        <label for="delivery-1" class="form-order__radio-label">
-                          <span>Доставка почтой Росии</span>
-                          <b>399 ₽</b>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="form-order__item">
-                      <div class="form-order__radio">
-                        <input data-key="Способ доставки:" value="Доставка курьером - 600 ₽" type="radio"
-                          name="delivery" id="delivery-2">
-                        <label for="delivery-2" class="form-order__radio-label">
-                          <span>Доставка курьером</span>
-                          <b>600 ₽</b>
-                        </label>
-                      </div>
-                    </div>
-
-                    <div class="form-order__item form-order__item--mobile-column">
-                      <div class="form-order__label">
-                        <label for="time">Время доставки </label>
-                      </div>
-                      <div class="form-order__input">
-                        <select name="" id="time" class="input">
-                          <option value="">Выберите из списка</option>
-                          <option value="">10:00</option>
-                          <option value="">11:00</option>
-                          <option value="">12:00</option>
-                          <option value="">13:00</option>
-                          <option value="">14:00</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div class="form-order__item form-order__item--full form-order__item--mobile-column">
-                      <div class="form-order__label">
-                        <label for="massega">Ваш комментарий:</label>
-                      </div>
-                      <div class="form-order__textarea">
-                        <textarea data-key="Ваш комментарий" id="massega" class="textarea"></textarea>
-                      </div>
-                    </div>
-                    <div class="form-order__item form-order__item--full">
-                      <button type="button" class="js_form-order__button form-order__button button">ДАЛЕЕ</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End of STEP 2 -->
-
-              <!-- Start STEP 3 -->
-              <div class="order-step">
-                <div class="order-step__header">
-                  <div class="order-step__point order-step__point--active">3</div>
-                  <h5 class="order-step__title h5">Способ оплаты</h5>
-                </div>
-
-                <div class="order-step__form form-order">
-                  <div class="order-step__payment">
-
-                    <div class="order-step__payment-wrap">
-                      <div class="order-step__payment-item">
-                        <label class="order-step__payment-label">
-                          <input data-key="Способ оплаты:" value="Оплата картой онлайн"
-                            class="order-step__payment-input" type="radio" name="payment">
-                          <div class="order-step__payment-block">
-                            <div class="order-step__payment-box"></div>
-                            <div class="order-step__payment-row">
-                              <div class="order-step__payment-image">
-                                <img src="img/payment-1.png">
-                              </div>
-                              <div class="order-step__payment-text">
-                                <span>Оплата картой онлайн</span>
-                              </div>
-                            </div>
-                          </div>
-                        </label>
-                      </div>
-
-                      <div class="order-step__payment-item">
-                        <label class="order-step__payment-label">
-                          <input data-key="Способ оплаты:" value="Оплата при получении"
-                            class="order-step__payment-input" type="radio" name="payment">
-                          <div class="order-step__payment-block">
-                            <div class="order-step__payment-box"></div>
-                            <div class="order-step__payment-row">
-                              <div class="order-step__payment-image">
-                                <img src="img/payment-2.png">
-                              </div>
-                              <div class="order-step__payment-text">
-                                <span>Оплата при получении</span>
-                              </div>
-                            </div>
-                          </div>
-                        </label>
-                      </div>
-                    </div>
-
-                    <div class="order-step__payment-wrap">
-                      <div class="order-step__payment-item">
-                        <label class="order-step__payment-label order-step__payment-label--gold">
-                          <input data-key="Способ оплаты:" value="Сбербанк подписка" class="order-step__payment-input"
-                            type="radio" name="payment">
-                          <div class="order-step__payment-block">
-                            <div class="order-step__payment-box"></div>
-                            <div class="order-step__payment-row">
-                              <div class="order-step__payment-image">
-                                <img src="img/payment-4.png">
-                              </div>
-                            </div>
-                            <div class="order-step__payment-row">
-                              <a href="#">Посмотреть условия подписки ➝</a>
-                            </div>
-                          </div>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-order__item form-order__item--full">
-                    <button type="button" class="js_form-order__button form-order__button button">ДАЛЕЕ</button>
-                  </div>
-                </div>
-
-              </div>
-              <!-- End of STEP 3 -->
-
-              <!-- Кнопка оплатить появляется после заполнения всех шагов -->
-              <button class="button order-step__button-pay">оплатить</button>
-
-              <div class="order-step__policy">
-                <label class="checkbox">
-                  <input class="checkbox__input" type="checkbox">
-                  <div class="checkbox__custom">
-                    <svg class="checkbox__icon">
-                      <use xlink:href="#done"></use>
-                    </svg>
-                  </div>
-                  <span class="checkbox__text">
-                    Я согласен с <a href="#" class="checkbox__link">условиями</a> заказа медали, в том числе с <a
-                      href="#" class="checkbox__link">Соглашением об условиях заказа</a> и с <a href="#"
-                      class="checkbox__link">Политикой обработки персональных данных</a>
-                  </span>
-                </label>
-              </div>
-            </form>
-
-
-            <!-- Для примера -->
-
-            <h3 class="h3" style="border-top: 1px solid black; margin: 100px 0 50px; padding-top: 30px;">Для примера
-            </h3>
-
-            <!-- Вид карточки после заполнения. Предыдущий шаг. -->
-            <p style="margin-bottom: 10px; font-style: italic;">Вид карточки после заполнения. Предыдущий шаг.</p>
-
-            <div class="order-step">
-              <div class="order-step__header">
-                <div class="order-step__point order-step__point--done">
-                  <svg class="order-step__point-icon">
-                    <use xlink:href="#done"></use>
-                  </svg>
-                </div>
-                <h5 class="h5">Контактные данные</h5>
-                <a href="#" class="order-step__edit">
-                  <svg class="order-step__edit-icon">
-                    <use xlink:href="#edit"></use>
-                  </svg>
-                  <span class="order-step__edit-text">Изменить</span>
-                </a>
-                <div class="order-step__personal">
-                  <p class="order-step__personal-item order-step__personal-item--name"><b>Заказчик:</b>
-                    Константинопольский Александр</p>
-                  <p class="order-step__personal-item"><b>Телефон:</b> +7(953) 723-41-20</p>
-                </div>
-              </div>
+              <!-- ./ End of content -->
+              <!-- aside -->
+              <aside class="order__aside order__aside--mobile-hidden">
+                ${require('./templates/blocks/card-order.html')}
+              </aside>
+              <!-- ./ End of aside -->
             </div>
-
-            <!-- Вид карточки до заполнения. Следующий шаг -->
-            <p style="margin: 30px 0 10px; font-style: italic;">Вид карточки до заполнения. Следующий шаг.</p>
-
-            <div class="order-step">
-              <div class="order-step__header">
-                <div class="order-step__point">2</div>
-                <h5 class="order-step__title order-step__title--gray h5">Адрес и способ доставки</h5>
-              </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
-          </div>
-          <!-- ./ End of content -->
-          <!-- aside -->
-          <aside class="order__aside order__aside--mobile-hidden">
-            ${require('./templates/blocks/card-order.html')}
-          </aside>
-          <!-- ./ End of aside -->
+          </form>
         </div>
-      </div>
-      <!-- ./ End of wrapper -->
-
-    </section>
-    <!-- ./ End of order -->
-  </main>
-  ${require('./templates/footer-sm.html')}
-</body>
-
+        <!-- ./ End of wrapper -->
+      </section>
+      <!-- ./ End of order -->
+    </main>
+    ${require('./templates/footer-sm.html')}
+  </body>
 </html>

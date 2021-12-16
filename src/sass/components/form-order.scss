@@ -69,13 +69,18 @@
   }
 
   &__radio {
+    position: relative;
     width: 100%;
 
     input {
       position: absolute;
+      top: 50%;
+      left: 50%;
       z-index: -2;
-      visibility: hidden;
-      opacity: 0;
+      width: 1px;
+      height: 1px;
+      // opacity: 0;
+      transform: translate(-50%, -50%);
 
       &:checked + label {
         border-color: $main;
@@ -157,5 +162,14 @@
     @include max-width($phone) {
       width: 100%;
     }
+  }
+}
+
+.form-order-finish {
+  display: none;
+
+  &.current,
+  &.completed {
+    display: block;
   }
 }
