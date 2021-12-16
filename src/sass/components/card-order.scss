@@ -1,0 +1,96 @@
+.card-order {
+  box-sizing: border-box;
+  padding: 42px 32px 40px;
+  background-color: $white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  &__name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 145%;
+    color: $gray-dark;
+  }
+
+  &__info {
+    margin-bottom: 16px;
+  }
+
+  &__info-row {
+    display: flex;
+    align-items: flex-end;
+    &:not(:last-child) {
+      margin-bottom: 12px;
+      line-height: 154%;
+    }
+  }
+
+  &__info-title {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    flex: 1;
+    padding-right: 10px;
+    overflow: hidden;
+    font-size: 0.875rem;
+    line-height: 154%;
+    color: $gray;
+    vertical-align: bottom;
+
+    &::after {
+      position: absolute;
+      right: -10px;
+      bottom: 0.36em;
+      z-index: -1;
+      width: calc(100% - 16px);
+      content: '';
+      border-bottom: 1px dashed #e0e0e0;
+    }
+  }
+
+  &__info-value {
+    min-width: 91px;
+    padding-left: 10px;
+    font-size: 0.875rem;
+    line-height: 154%;
+
+    @include max-width(1024px) {
+      // min-width: 107px;
+    }
+  }
+
+  &__promo-code {
+    margin-bottom: 15px;
+  }
+
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 9px;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  &__total-title {
+    font-size: 0.8125rem;
+    line-height: 154%;
+    color: $gray;
+    text-transform: uppercase;
+  }
+
+  &__total-price {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 150%;
+    color: $black;
+  }
+}

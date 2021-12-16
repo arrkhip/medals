@@ -32,6 +32,8 @@
     opacity: 1;
 
     .drawer {
+      // new
+      visibility: visible;
       opacity: 1;
       transform: translateX(0);
     }
@@ -48,6 +50,8 @@
     text-align: center;
     white-space: normal;
     vertical-align: middle;
+    // new
+    visibility: hidden;
     background-color: $white;
     opacity: 0;
     transition-timing-function: $transition-timing-function;

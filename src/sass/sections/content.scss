@@ -22,14 +22,17 @@
   background-position: top 140px right;
 
   .with-aside & {
-    display: grid;
-    grid-template-columns: 1fr 375px;
-    gap: 30px;
+    display: flex;
+    justify-content: space-between;
+    // display: grid;
+    // grid-template-columns: 1fr 375px;
+    // gap: 30px;
 
     @include max-width(1024px) {
-      grid-template-columns: 1fr;
-      gap: 40px;
-      padding: 40px 0;
+      flex-direction: column;
+      // grid-template-columns: 1fr;
+      // gap: 40px;
+      // padding: 40px 0;
       background: none;
     }
   }

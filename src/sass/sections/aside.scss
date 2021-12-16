@@ -1,6 +1,10 @@
 .aside {
   .with-aside & {
+    flex: 0 0 375px;
+    width: 100%;
+    max-width: 375px;
     margin: -612px 0 0 0;
+    margin-left: 30px;
 
     @include max-width(1200px) {
       margin: -532px 0 0 0;

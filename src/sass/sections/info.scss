@@ -43,25 +43,28 @@
 }
 
 .info__content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  visibility: hidden;
-  opacity: 0;
-  transition-timing-function: $transition-timing-function;
-  transition-duration: $transition-duration;
-  transition-property: opacity, visibility;
+  display: none;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // visibility: hidden;
+  // opacity: 0;
+  // transition-timing-function: $transition-timing-function;
+  // transition-duration: $transition-duration;
+  // transition-property: opacity, visibility;
 
   &.active {
-    position: static;
-    visibility: visible;
-    opacity: 1;
+    display: block;
+    // position: static;
+    // visibility: visible;
+    // opacity: 1;
   }
 
   @include max-width(1024px) {
-    position: static;
-    visibility: visible;
-    opacity: 1;
+    display: block;
+    // position: static;
+    // visibility: visible;
+    // opacity: 1;
   }
 }
 
