@@ -1,0 +1,30 @@
+.promo-code {
+  &__title {
+    margin-bottom: 4px;
+    font-size: 0.875rem;
+    line-height: 143%;
+    color: $gray-dark;
+  }
+
+  &__box {
+    display: flex;
+  }
+
+  &__input-box {
+    width: calc(100% - 130px);
+  }
+
+  &__input {
+    width: 100%;
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &__button {
+    min-width: 130px;
+    height: 40px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}

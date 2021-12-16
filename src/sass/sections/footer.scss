@@ -1,9 +1,22 @@
 .footer {
+  flex-shrink: 0;
   padding: 48px 0 24px 0;
   background: #231f20;
 
   @include max-width(1024px) {
     padding: 24px 0;
+  }
+
+  &--white {
+    background-color: $white;
+
+    .footer__bottom {
+      border-color: #e0e0e0;
+    }
+
+    .footer__copyright {
+      color: $gray-extra-dark;
+    }
   }
 }
 

@@ -1,9 +1,11 @@
 .social {
   padding: 60px 0;
-  background-color: $gray-extra-light;
-  background-image: url('../img/social-bg-1.png'), url('../img/social-bg-2.png');
-  background-repeat: no-repeat;
-  background-position: center left, center right;
+  // background-color: $gray-extra-light;
+  // background-image: url('../img/social-bg-1.png'), url('../img/social-bg-2.png');
+  // background-repeat: no-repeat;
+  // background-position: center left, center right;
+  background: $gray-extra-light url('../img/social-bg-3.jpg') center no-repeat;
+  background-size: contain;
 
   @include max-width(1024px) {
     padding: 40px 0;

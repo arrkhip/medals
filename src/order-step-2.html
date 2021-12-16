@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport"
+  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <title>Main</title>
+</head>
+
+<body>
+  <main>
+    <!-- order -->
+    <section class="order">
+      <!-- header -->
+      <header class="order__header">
+        <div class="container">
+          <div class="order__header-wrapper">
+            <a href="#" class="order__header-back">🠔 Назад к описанию</a>
+            <a href="#" class="order__header-logo">
+              <img src="img/logo.svg">
+            </a>
+            <div class="order__header-contacts">
+              <a href="tel:+74959742977">+7 (495) 974-29-77</a>
+              <p>Пн-Вс 9:00-21:00 (МСК)</p>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- ./ End of header -->
+      <div class="container">
+        <div class="order__headline order__headline--top-offset">
+          <h1 class="h4 order__page-title">Заказать памятную медаль</h1>
+        </div>
+        <!-- wrapper -->
+        <div class="order__wrapper order__wrapper--gap-sm order__wrapper--pt-sm">
+          <!-- content -->
+          <div class="order__content">
+            <!-- step -->
+            <!-- order-step--filled -->
+            <div class="order-step">
+              <div class="order-step__header">
+                <div class="order-step__point order-step__point--done">
+                  <svg class="order-step__point-icon">
+                    <use xlink:href="#done"></use>
+                  </svg>
+                </div>
+                <h5 class="h5">Контактные данные</h5>
+                <a href="#" class="order-step__edit">
+                  <svg class="order-step__edit-icon">
+                    <use xlink:href="#edit"></use>
+                  </svg>
+                  <span class="order-step__edit-text">Изменить</span>
+                </a>
+                <div class="order-step__personal">
+                  <p class="order-step__personal-item order-step__personal-item--name"><b>Заказчик:</b> Константинопольский Александр</p>
+                  <p class="order-step__personal-item"><b>Телефон:</b> +7(953) 723-41-20</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="order-step">
+              <div class="order-step__header">
+                <div class="order-step__point order-step__point--active">2</div>
+                <h5 class="order-step__title h5">Адрес и способ доставки</h5>
+              </div>
+              <!-- <div class="order-step__body"> -->
+              <form action="" class="order-step__form form-order">
+                <div class="form-order__grid">
+
+                  <div class="form-order__item">
+                    <div class="form-order__label">
+                      <label for="city">Город<em>*</em></label>
+                    </div>
+                    <div class="form-order__input">
+                      <input type="text" id="city" value="Тамбов" class="input" required>
+                    </div>
+                  </div>
+
+                  <div class="form-order__item">
+                    <div class="form-order__label">
+                      <label for="street">Улица<em>*</em></label>
+                    </div>
+                    <div class="form-order__input">
+                      <input type="text" value="Набережная" id="street" class="input" required>
+                    </div>
+                  </div>
+
+                  <div class="form-order__item">
+                    <div class="form-order__label">
+                      <label for="house">Дом<em>*</em></label>
+                    </div>
+                    <div class="form-order__input">
+                      <input type="text" id="house" value="28/4" class="input" required>
+                    </div>
+                  </div>
+
+                  <div class="form-order__item">
+                    <div class="form-order__label">
+                      <label for="room">Квартира</label>
+                    </div>
+                    <div class="form-order__input">
+                      <input type="text" value="126" id="room" class="input">
+                    </div>
+                  </div>
+
+                  <div class="form-order__item ">
+                    <div class="form-order__label">
+                      <label for="postcode">Почтовый индекс<em>*</em></label>
+                    </div>
+                    <div class="form-order__input">
+                      <input type="text" value="392002" id="postcode" class="input" required>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-order__subtitle">Выберите способ доставки</div>
+
+                <div class="form-order__grid">
+                  <div class="form-order__item">
+                    <div class="form-order__radio">
+                      <input type="radio" name="delivery" id="delivery-1">
+                      <label for="delivery-1" class="form-order__radio-label">
+                        <span>Доставка почтой Росии</span>
+                        <b>399 ₽</b>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-order__item">
+                    <div class="form-order__radio">
+                      <input type="radio" name="delivery" id="delivery-2">
+                      <label for="delivery-2" class="form-order__radio-label">
+                        <span>Доставка курьером</span>
+                        <b>600 ₽</b>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="form-order__item form-order__item--mobile-column">
+                    <div class="form-order__label">
+                      <label for="time">Время доставки </label>
+                    </div>
+                    <div class="form-order__input">
+                      <select name="" id="time" class="input">
+                        <option value="">Выберите из списка</option>
+                        <option value="">10:00</option>
+                        <option value="">11:00</option>
+                        <option value="">12:00</option>
+                        <option value="">13:00</option>
+                        <option value="">14:00</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-order__item form-order__item--full form-order__item--mobile-column">
+                    <div class="form-order__label">
+                      <label for="massega">Ваш комментарий</label>
+                    </div>
+                    <div class="form-order__textarea">
+                      <textarea id="massega" class="textarea"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-order__item form-order__item--full">
+                  <button class="form-order__button button">ДАЛЕЕ</button>
+                </div>
+              </div>
+              </form>
+            </div>
+            <!-- ./ End of step -->
+             <!-- step -->
+            <div class="order-step">
+              <div class="order-step__header">
+                <div class="order-step__point">3</div>
+                <h5 class="order-step__title order-step__title--gray h5">Способ оплаты</h5>
+              </div>
+            </div>
+            <!-- ./ End of step -->
+          </div>
+          <!-- ./ End of content -->
+          <!-- aside -->
+          <aside class="order__aside order__aside--mobile-hidden">
+            ${require('./templates/blocks/card-order.html')}
+          </aside>
+          <!-- ./ End of aside -->
+        </div>
+      </div>
+      <!-- ./ End of wrapper -->
+
+    </section>
+    <!-- ./ End of order -->
+  </main>
+  ${require('./templates/footer-sm.html')}
+</body>
+
+</html>

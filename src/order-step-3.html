@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport"
+  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <title>Main</title>
+</head>
+
+<body>
+  <main>
+    <!-- order -->
+    <section class="order">
+      <!-- header -->
+      <header class="order__header">
+        <div class="container">
+          <div class="order__header-wrapper">
+            <a href="#" class="order__header-back">🠔 Назад к описанию</a>
+            <a href="#" class="order__header-logo">
+              <img src="img/logo.svg">
+            </a>
+            <div class="order__header-contacts">
+              <a href="tel:+74959742977">+7 (495) 974-29-77</a>
+              <p>Пн-Вс 9:00-21:00 (МСК)</p>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- ./ End of header -->
+      <div class="container">
+        <div class="order__headline order__headline--top-offset">
+          <h1 class="h4 order__page-title">Заказать памятную медаль</h1>
+        </div>
+        <!-- wrapper -->
+        <div class="order__wrapper order__wrapper--gap-sm order__wrapper--pt-sm">
+          <!-- content -->
+          <div class="order__content">
+            <!-- step -->
+            <div class="order-step">
+              <div class="order-step__header">
+                <div class="order-step__point order-step__point--done">
+                  <svg class="order-step__point-icon">
+                    <use xlink:href="#done"></use>
+                  </svg>
+                </div>
+                <h5 class="h5">Контактные данные</h5>
+                <a href="#" class="order-step__edit">
+                  <svg class="order-step__edit-icon">
+                    <use xlink:href="#edit"></use>
+                  </svg>
+                  <span class="order-step__edit-text">Изменить</span>
+                </a>
+                <div class="order-step__personal">
+                  <p class="order-step__personal-item order-step__personal-item--name"><b>Заказчик:</b> Константинопольский Александр</p>
+                  <p class="order-step__personal-item"><b>Телефон:</b> +7(953) 723-41-20</p>
+                </div>
+              </div>
+            </div>
+            <!-- ./ End of step -->
+            <!-- step -->
+            <div class="order-step">
+              <div class="order-step__header">
+                <div class="order-step__point order-step__point--done">
+                  <svg class="order-step__point-icon">
+                    <use xlink:href="#done"></use>
+                  </svg>
+                </div>
+                <h5 class="h5">Адрес и способ доставки</h5>
+                <a href="#" class="order-step__edit">
+                  <svg class="order-step__edit-icon">
+                    <use xlink:href="#edit"></use>
+                  </svg>
+                  <span class="order-step__edit-text">Изменить</span>
+                </a>
+                <div class="order-step__personal">
+                  <p class="order-step__personal-item"><b>Адрес:</b> г. Тамбов, ул. Набережная 28/4, кв. 124, 3920002</p>
+                  <p class="order-step__personal-item"><b>Доставка:</b> курьером <span>600 ₽</span></p>
+                  <p class="order-step__personal-item"><b>Комментарий:</b> найти очень просто — слева от красной арки за 7 поворотом во 2 портал</p>
+                </div>
+              </div>
+            </div>
+            <!-- ./ End of step -->
+            <!-- step -->
+            <div class="order-step">
+              <div class="order-step__header">
+                <div class="order-step__point order-step__point--active">3</div>
+                <h5 class="order-step__title h5">Способ оплаты</h5>
+              </div>
+
+              <form action="" class="order-step__form form-order">
+                <div class="order-step__payment">
+
+                  <div class="order-step__payment-wrap">
+                    <div class="order-step__payment-item">
+                      <label class="order-step__payment-label">
+                        <input class="order-step__payment-input" type="radio" name="payment">
+                        <div class="order-step__payment-block">
+                          <div class="order-step__payment-box"></div>
+                          <div class="order-step__payment-row">
+                            <div class="order-step__payment-image">
+                              <img src="img/payment-1.png">
+                            </div>
+                            <div class="order-step__payment-text">
+                              <span>Оплата картой онлайн</span>
+                            </div>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div class="order-step__payment-item">
+                      <label class="order-step__payment-label">
+                        <input class="order-step__payment-input" type="radio" name="payment">
+                        <div class="order-step__payment-block">
+                          <div class="order-step__payment-box"></div>
+                          <div class="order-step__payment-row">
+                            <div class="order-step__payment-image">
+                              <img src="img/payment-2.png">
+                            </div>
+                            <div class="order-step__payment-text">
+                              <span>Оплата при получении</span>
+                            </div>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="order-step__payment-wrap">
+                    <div class="order-step__payment-item">
+                      <label class="order-step__payment-label order-step__payment-label--gold">
+                        <input class="order-step__payment-input" type="radio" name="payment">
+                        <div class="order-step__payment-block">
+                          <div class="order-step__payment-box"></div>
+                          <div class="order-step__payment-row">
+                            <div class="order-step__payment-image">
+                              <img src="img/payment-4.png">
+                            </div>
+                          </div>
+                          <div class="order-step__payment-row">
+                            <a href="#">Посмотреть условия подписки ➝</a>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+            <!-- ./ End of step -->
+
+          </div>
+          <!-- ./ End of content -->
+          <!-- aside -->
+          <aside class="order__aside order__aside--mobile-hidden">
+            ${require('./templates/blocks/card-order.html')}
+          </aside>
+          <!-- ./ End of aside -->
+        </div>
+      </div>
+      <!-- ./ End of wrapper -->
+
+    </section>
+    <!-- ./ End of order -->
+  </main>
+  ${require('./templates/footer-sm.html')}
+</body>
+
+</html>
