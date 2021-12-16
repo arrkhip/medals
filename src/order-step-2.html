@@ -5,7 +5,7 @@
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="viewport"
-  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
   <title>Main</title>
 </head>
 
@@ -54,19 +54,20 @@
                   <span class="order-step__edit-text">Изменить</span>
                 </a>
                 <div class="order-step__personal">
-                  <p class="order-step__personal-item order-step__personal-item--name"><b>Заказчик:</b> Константинопольский Александр</p>
+                  <p class="order-step__personal-item order-step__personal-item--name"><b>Заказчик:</b>
+                    Константинопольский Александр</p>
                   <p class="order-step__personal-item"><b>Телефон:</b> +7(953) 723-41-20</p>
                 </div>
               </div>
             </div>
 
-            <div class="order-step">
+            <div class="order-step current">
               <div class="order-step__header">
                 <div class="order-step__point order-step__point--active">2</div>
                 <h5 class="order-step__title h5">Адрес и способ доставки</h5>
               </div>
               <!-- <div class="order-step__body"> -->
-              <form action="" class="order-step__form form-order">
+              <div class="order-step__form form-order">
                 <div class="form-order__grid">
 
                   <div class="form-order__item">
@@ -74,7 +75,7 @@
                       <label for="city">Город<em>*</em></label>
                     </div>
                     <div class="form-order__input">
-                      <input type="text" id="city" value="Тамбов" class="input" required>
+                      <input data-key="Город:" type="text" id="city" value="Тамбов" class="input" required>
                     </div>
                   </div>
 
@@ -83,7 +84,7 @@
                       <label for="street">Улица<em>*</em></label>
                     </div>
                     <div class="form-order__input">
-                      <input type="text" value="Набережная" id="street" class="input" required>
+                      <input data-key="Улица:" type="text" value="Набережная" id="street" class="input" required>
                     </div>
                   </div>
 
@@ -92,7 +93,7 @@
                       <label for="house">Дом<em>*</em></label>
                     </div>
                     <div class="form-order__input">
-                      <input type="text" id="house" value="28/4" class="input" required>
+                      <input data-key="Дом:" type="text" id="house" value="28/4" class="input" required>
                     </div>
                   </div>
 
@@ -101,7 +102,7 @@
                       <label for="room">Квартира</label>
                     </div>
                     <div class="form-order__input">
-                      <input type="text" value="126" id="room" class="input">
+                      <input data-key="Квартира:" type="text" value="126" id="room" class="input">
                     </div>
                   </div>
 
@@ -110,7 +111,7 @@
                       <label for="postcode">Почтовый индекс<em>*</em></label>
                     </div>
                     <div class="form-order__input">
-                      <input type="text" value="392002" id="postcode" class="input" required>
+                      <input data-key="Почтовый индек:" type="text" value="392002" id="postcode" class="input" required>
                     </div>
                   </div>
                 </div>
@@ -120,7 +121,8 @@
                 <div class="form-order__grid">
                   <div class="form-order__item">
                     <div class="form-order__radio">
-                      <input type="radio" name="delivery" id="delivery-1">
+                      <input data-key="Cпособ доставки:" value="Доставка почтой Росии - 399 ₽" type="radio"
+                        name="delivery" id="delivery-1">
                       <label for="delivery-1" class="form-order__radio-label">
                         <span>Доставка почтой Росии</span>
                         <b>399 ₽</b>
@@ -129,7 +131,8 @@
                   </div>
                   <div class="form-order__item">
                     <div class="form-order__radio">
-                      <input type="radio" name="delivery" id="delivery-2">
+                      <input data-key="Способ доставки:" value="Доставка курьером - 600 ₽" type="radio" name="delivery"
+                        id="delivery-2">
                       <label for="delivery-2" class="form-order__radio-label">
                         <span>Доставка курьером</span>
                         <b>600 ₽</b>
@@ -155,26 +158,22 @@
 
                   <div class="form-order__item form-order__item--full form-order__item--mobile-column">
                     <div class="form-order__label">
-                      <label for="massega">Ваш комментарий</label>
+                      <label for="massega">Ваш комментарий:</label>
                     </div>
                     <div class="form-order__textarea">
-                      <textarea id="massega" class="textarea"></textarea>
+                      <textarea data-key="Ваш комментарий" id="massega" class="textarea"></textarea>
                     </div>
                   </div>
                   <div class="form-order__item form-order__item--full">
-                  <button class="form-order__button button">ДАЛЕЕ</button>
+                    <button type="button" class="js_form-order__button form-order__button button">ДАЛЕЕ</button>
+                  </div>
                 </div>
               </div>
-              </form>
             </div>
             <!-- ./ End of step -->
-             <!-- step -->
-            <div class="order-step">
-              <div class="order-step__header">
-                <div class="order-step__point">3</div>
-                <h5 class="order-step__title order-step__title--gray h5">Способ оплаты</h5>
-              </div>
-            </div>
+
+            <!-- step -->
+
             <!-- ./ End of step -->
           </div>
           <!-- ./ End of content -->

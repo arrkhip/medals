@@ -36,3 +36,33 @@ window.addEventListener('resize', function() {
     $modalAside.insertAdjacentElement('afterbegin', $modalCard);
   }
 });
+
+//
+
+const template = (key, value) => `
+  <p class="order-step__personal-item order-step__personal-item--name"><b>${key}</b> ${value}</p>
+`;
+const buttonsSend = document.querySelectorAll('.js_form-order__button');
+buttonsSend.forEach((button) => {
+  button.addEventListener('click', function() {
+    const step = button.closest('.order-step');
+    const header = step.querySelector('.order-step__header');
+    const inputs = step.querySelectorAll('[data-key]');
+
+    const html = document.createElement('div');
+    html.className = 'order-step__personal';
+
+    inputs.forEach((input) => {
+      const key = input.getAttribute('data-key');
+
+      if (input.type === 'radio' && !input.checked) {
+        return;
+      }
+
+      html.innerHTML += template(key, input.value);
+    });
+
+    header.appendChild(html);
+    step.classList.add('completed');
+  });
+});

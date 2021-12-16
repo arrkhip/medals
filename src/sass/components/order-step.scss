@@ -10,6 +10,18 @@
     margin-left: -15px;
   }
 
+  &:not(.current) {
+    .order-step__form {
+      // display: none;
+    }
+  }
+
+  &.completed {
+    .order-step__form {
+      // display: none;
+    }
+  }
+
   & + & {
     margin-top: 12px;
   }
@@ -151,6 +163,7 @@
   &__payment {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
 
     @include max-width($phone) {
       flex-direction: column;
