@@ -194,6 +194,10 @@
   em {
     color: $second;
   }
+
+  label {
+    overflow-wrap: break-word;
+  }
 }
 
 .form__row-input {
