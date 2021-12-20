@@ -80,16 +80,23 @@ export default class StepsController {
       let value = '';
 
       $similarInputs.forEach(($input) => {
+        let inputValue = $input.value;
+
+        if ($input.type === 'radio') {
+          inputValue = $input.getAttribute('data-value');
+        }
+
         if ($input.type === 'radio' && !$input.checked) {
           return;
         }
 
         if ($input.tagName === 'SELECT') {
-          value += separator + $input.selectedOptions[0].value;
+          inputValue = $input.selectedOptions[0].value;
+          value += separator + inputValue;
           return;
         }
 
-        value += $input.value + separator;
+        value += inputValue + separator;
       });
 
       $html.innerHTML += template(currKey, value);
