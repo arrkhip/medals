@@ -365,7 +365,21 @@
     }
   }
 
-  // form__payment-label--gold
+  &__payment-text--sber {
+    b {
+      display: block;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__payments-sber {
+    display: block;
+    margin: 2px 0 5px 0;
+  }
+
   &__payment-label--gold {
     .order-step__payment-block {
       background: radial-gradient(56.27% 128.64% at 3.06% 100%, #dccda7 0%, rgba(250, 247, 237, 0) 100%),
