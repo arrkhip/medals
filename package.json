@@ -66,6 +66,8 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "inputmask": "^5.0.7",
+    "intl-tel-input": "^17.0.15",
     "plyr": "^3.6.8",
     "scroll-lock": "^2.1.4",
     "serialize-javascript": "^5.0.1",

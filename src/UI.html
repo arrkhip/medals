@@ -1,93 +1,106 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>UI elements</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>UI elements</title>
-</head>
+  <body>
+    <section style="background-color: #fff;">
+      <div class="container">
+        <h3 style="text-align: center;">Текст</h3>
 
-<body>
-  <section style="background-color: #fff;">
-    <div class="container">
-      <h3 style="text-align: center;">Текст</h3>
-
-      <div style="margin: 20px;">
-        <h1 class="h1">Заголовок H-1</h1>
-        <h2 class="h2">Заголовок H-2</h2>
-        <h3 class="h3">Заголовок H-3</h3>
-        <h4 class="h4">Заголовок H-4</h4>
-        <h5 class="h5">Заголовок H-5</h5>
-        <h6 class="h6">Заголовок H-6</h6>
+        <div style="margin: 20px;">
+          <h1 class="h1">Заголовок H-1</h1>
+          <h2 class="h2">Заголовок H-2</h2>
+          <h3 class="h3">Заголовок H-3</h3>
+          <h4 class="h4">Заголовок H-4</h4>
+          <h5 class="h5">Заголовок H-5</h5>
+          <h6 class="h6">Заголовок H-6</h6>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section style="background-color: #fff;">
-    <div class="container">
-      <h3 style="text-align: center;">Кнопки</h3>
+    <section style="background-color: #fff;">
+      <div class="container">
+        <h3 style="text-align: center;">Кнопки</h3>
 
-      <div style="margin: 20px 0;">
-        <button class="button">Кнопка обычная</button>
-        <button class="button" disabled>Кнопка обычная</button>
-      </div>
+        <div style="margin: 20px 0;">
+          <button class="button">Кнопка обычная</button>
+          <button class="button" disabled>Кнопка обычная</button>
+        </div>
 
-      <div style="margin: 20px 0;">
-        <button class="button button--close">
-          <svg>
-            <use xlink:href="#close"></use>
-          </svg>
-        </button>
-        <button class="button button--close" disabled>
-          <svg>
-            <use xlink:href="#close"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <section style="background-color: #fff;">
-    <div class="container">
-      <h3 style="text-align: center;">Инпуты</h3>
-
-      <div style="margin: 20px 0;">
-        <input class="input" type="text" placeholder="Placeholder Input" />
-        <input class="input" type="text" placeholder="Placeholder Input" disabled />
-      </div>
-
-      <div style=" display: flex; flex-direction: column; align-items: flex-start;margin: 20px 0;">
-        <textarea id="" cols="30" rows="10" class="textarea" placeholder="Placeholder Textarea"></textarea>
-
-        <label class="checkbox">
-          <input class="checkbox__input" type="checkbox" />
-          <div class="checkbox__custom">
-            <svg class="checkbox__icon">
-              <use xlink:href="#done"></use>
+        <div style="margin: 20px 0;">
+          <button class="button button--close">
+            <svg>
+              <use xlink:href="#close"></use>
             </svg>
-          </div>
-          <span class="checkbox__text">
-            Согласен на обработку
-            <a class="checkbox__link" href="#">персональных данных</a>
-          </span>
-        </label>
-
-        <label class="radio">
-          <input class="radio__input" type="radio" name="name1" />
-          <div class="radio__custom">
-            <svg class="radio__icon">
-              <use xlink:href="#done"></use>
+          </button>
+          <button class="button button--close" disabled>
+            <svg>
+              <use xlink:href="#close"></use>
             </svg>
-          </div>
-          <span class="radio__text">
-            Согласен на обработку
-            <a class="radio__link" href="#">персональных данных</a>
-          </span>
-        </label>
+          </button>
+        </div>
       </div>
-    </div>
-  </section>
-</body>
+    </section>
 
+    <section style="background-color: #fff;">
+      <div class="container">
+        <h3 style="text-align: center;">Инпуты</h3>
+
+        <div style="margin: 20px 0;">
+          <input class="input" type="text" placeholder="Placeholder Input" />
+          <input class="input" type="text" placeholder="Placeholder Input" disabled />
+
+          <div class="input-item">
+            <div class="input-item__body">
+              <div class="input-item__wrapper">
+                <input
+                  type="phone"
+                  class="input j_phoneMask"
+                  data-only-countries='["ru","ua","sk","ro"]'
+                  data-preferred-countries='["ru"]'
+                  data-utils-script="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.15/js/utils.min.js"
+                  placeholder=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style=" display: flex; flex-direction: column; align-items: flex-start;margin: 20px 0;">
+          <textarea id="" cols="30" rows="10" class="textarea" placeholder="Placeholder Textarea"></textarea>
+
+          <label class="checkbox">
+            <input class="checkbox__input" type="checkbox" />
+            <div class="checkbox__custom">
+              <svg class="checkbox__icon">
+                <use xlink:href="#done"></use>
+              </svg>
+            </div>
+            <span class="checkbox__text">
+              Согласен на обработку
+              <a class="checkbox__link" href="#">персональных данных</a>
+            </span>
+          </label>
+
+          <label class="radio">
+            <input class="radio__input" type="radio" name="name1" />
+            <div class="radio__custom">
+              <svg class="radio__icon">
+                <use xlink:href="#done"></use>
+              </svg>
+            </div>
+            <span class="radio__text">
+              Согласен на обработку
+              <a class="radio__link" href="#">персональных данных</a>
+            </span>
+          </label>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>

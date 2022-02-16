@@ -17,6 +17,7 @@ import './modules/Tab';
 import './modules/Drawer';
 import './modules/Modal';
 import './modules/Accordion';
+import './modules/PhoneMask';
 import './modules/Scroll';
 
 // sliders
