@@ -8,7 +8,7 @@ export default class PhoneMask {
     this.srcUtilsScripts =
       this.$el.getAttribute('data-utils-script') ||
       'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.15/js/utils.min.js';
-    this.initialCountry = document.firstElementChild.lang || 'ru';
+    this.initialCountry = JSON.parse(this.$el.getAttribute('data-initial-country'))[0] || 'ru';
     this.onlyCountries = JSON.parse(this.$el.getAttribute('data-only-countries'));
     this.preferredCountries = JSON.parse(this.$el.getAttribute('data-preferred-countries'));
 
