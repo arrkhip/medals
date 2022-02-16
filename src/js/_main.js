@@ -21,7 +21,10 @@ import './modules/Scroll';
 
 // sliders
 import './modules/sliders/banner';
+import './modules/sliders/promo';
 
+// Перенести в отдельный файл.
+// Перемещение формы на главной.
 const $modalCard = document.querySelector('.js_aside__form');
 const $modalContainer = document.querySelector('.mobile-form__wrapper');
 const $modalAside = document.querySelector('.aside__wrapper');

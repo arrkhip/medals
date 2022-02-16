@@ -203,6 +203,12 @@
 .form__row-input {
   display: flex;
   flex-direction: column;
+
+  @include max-width($phone) {
+    input {
+      min-height: 39px;
+    }
+  }
 }
 
 .form__remember {

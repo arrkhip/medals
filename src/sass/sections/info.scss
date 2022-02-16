@@ -72,6 +72,10 @@
   font-size: 0.875rem;
   line-height: 1.71;
   color: $gray-dark;
+
+  @include max-width($phone) {
+    font-size: 1rem;
+  }
 }
 
 .info__block + .info__block {
@@ -88,6 +92,12 @@
   font-weight: 500;
   color: $gray-extra-dark;
   border-left: 2px solid $main-light;
+
+  @include max-width($phone) {
+    padding-left: 8px;
+    font-size: 1rem;
+    line-height: 154%;
+  }
 }
 
 .info__block table {
@@ -131,7 +141,8 @@
   }
 }
 
-.info__title {
+.info__title,
+.info__block h5 {
   margin: 0 0 16px 0;
   color: $gray-extra-dark;
 }
@@ -148,6 +159,10 @@
     line-height: 1;
     color: $gray-extra-dark;
     text-align: center;
+
+    @include max-width($phone) {
+      font-size: 1.85rem;
+    }
   }
 
   &-gap {
@@ -188,7 +203,7 @@
     }
 
     &:hover {
-      color: $second;
+      color: $main;
     }
   }
 
@@ -209,7 +224,7 @@
     min-width: 24px;
     height: 24px;
     min-height: 24px;
-    stroke: $second;
+    stroke: $main;
     transition-timing-function: $transition-timing-function;
     transition-duration: $transition-duration;
     transition-property: transform;
@@ -232,6 +247,10 @@
   &-content {
     @include max-width(1024px) {
       padding: 0 0 8px 0;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
     }
   }
 }

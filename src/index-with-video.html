@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <title>Main</title>
+</head>
+
+<body>
+  <main class="with-aside">
+    ${require('./templates/header.html')}
+    ${require('./templates/menu.html')}
+
+    <!-- banner -->
+    <section class="banner">
+      <div class="container">
+        <!-- wrapper -->
+        <div class="banner__wrapper">
+          <!-- banner__slider -->
+          <div class="banner__slider swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <!-- video-block -->
+                <div class="banner__video-wrap">
+                  <div class="banner__video video-block">
+
+                    <!-- wrapper -->
+                    <div class="video-block__wrapper">
+                      <div class="plyr__video-embed" data-player="video">
+                        <iframe src="https://www.youtube.com/embed/bTqVqk7FSmY?origin=https://plyr.io"
+                          data-poster="${require('./img/video-cover.png')}"></iframe>
+                      </div>
+                    </div>
+                    <!-- ./ End of wrapper -->
+
+                  </div>
+
+                  <div class="banner__video-banner">
+                    <img src="img/video-cover.png" alt="">
+                    <div class="banner__video-title">Посмотрите <br> короткий ролик о нас <br> за 2 минуты</div>
+                  </div>
+
+                </div>
+
+                plyr.player.play();
+
+                on:{slideChange}
+
+
+                <!-- ./ End of video-block -->
+              </div>
+              <div class="swiper-slide">
+                <img src="img/banner-img-1.png" class="banner__image">
+                <img src="img/mobile-banner-img-1.png" class="banner__image banner__image--mobile">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <!-- ./ End of banner__slider -->
+        </div>
+        <!-- ./ End of wrapper -->
+      </div>
+    </section>
+    <!-- ./ End of banner -->
+
+    ${require('./templates/mobile-form.html')}
+    ${require('./templates/content.html')}
+    ${require('./templates/footer.html')}
+    ${require('./templates/blocks/purchase.html')}
+  </main>
+</body>
+
+</html>

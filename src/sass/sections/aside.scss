@@ -11,7 +11,16 @@
     }
 
     @include max-width(1024px) {
-      margin: 0 -15px;
+      max-width: 100%;
+      margin: 40px -15px 0;
+    }
+  }
+
+  @include min-width(1024px) {
+    &--offset-sm {
+      .with-aside & {
+        margin-top: -57px;
+      }
     }
   }
 

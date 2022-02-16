@@ -42,6 +42,41 @@ button {
     background-color: $gray-extra-light;
     border-color: $gray-extra-light;
   }
+
+  &--gold {
+    height: 65px;
+    padding: 20px 49px;
+    font: 600 1.125rem/1em $mont;
+    color: $black;
+    background: linear-gradient(
+        244deg,
+        #ebba75 -0.66%,
+        #c58f44 18.49%,
+        #ebba75 29.71%,
+        #fff 45.22%,
+        #ffe0b6 55.11%,
+        #b78f58 72.25%,
+        #f7d4a4 94.41%
+      ),
+      radial-gradient(
+        417.69% 2246.21% at 49.05% 50%,
+        #ebba75 0%,
+        #c58f44 10.5%,
+        #fff 19.08%,
+        #ffe0b6 23.53%,
+        #b78f58 30.78%,
+        #f7d4a4 41.63%,
+        #ebba75 100%
+      );
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 7px 21px rgba(255, 216, 101, 0.41);
+
+    &:hover {
+      color: $black;
+      box-shadow: none;
+    }
+  }
 }
 
 .button--close {
@@ -239,7 +274,7 @@ button {
     width: $checkbox-icon-size;
     height: $checkbox-icon-size;
     opacity: 0;
-    fill: $red;
+    stroke: $main;
     transition-timing-function: $transition-timing-function;
     transition-duration: $transition-duration;
     transition-property: opacity;
@@ -291,4 +326,12 @@ button {
       transform: translate(-50%, -50%);
     }
   }
+}
+
+.allotted {
+  color: $main;
+}
+
+img {
+  max-width: 100%;
 }

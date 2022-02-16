@@ -1,10 +1,20 @@
 $fonts-path: '../fonts/';
 $mont-path: $fonts-path + 'Montserrat/';
+$garamond-path: $fonts-path + 'GaramondPremrPro/';
 
 // Fonts
-$mont: 'Museo Sans Cyrl';
-
+$mont: 'Montserrat';
+$garamond: 'GaramondPremrPro';
 /* stylelint-disable scss/operator-no-unspaced */
+// GaramondPremrPro
+@font-face {
+  font-family: $garamond;
+  font-style: normal;
+  font-weight: 400;
+  src: url($garamond-path+'GaramondPremrPro.woff');
+  src: local('GaramondPremrPro'), local('GaramondPremrPro'), url($garamond-path+'GaramondPremrPro.woff') format('woff');
+  font-display: swap;
+}
 
 // Montserrat
 @font-face {
@@ -41,8 +51,5 @@ $mont: 'Museo Sans Cyrl';
   font-style: normal;
   font-weight: bold;
   src: url($mont-path+'Montserrat-Bold.woff');
-  src: local('Montserrat-Bold'), local('Montserrat-Bold'), url($mont-path+'Montserrat-Bold.woff') format('woff');
   font-display: swap;
 }
-
-/* stylelint-enable scss/operator-no-unspaced */

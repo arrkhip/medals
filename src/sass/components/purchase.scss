@@ -1,0 +1,33 @@
+.purchase {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+  display: none;
+  padding: 8px;
+  background-color: $white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+  @include max-width($phone) {
+    display: block;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__price {
+    flex-shrink: 0;
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: $gray-extra-dark;
+  }
+
+  &__button {
+    flex: 0 1 100%;
+    min-width: auto;
+  }
+}

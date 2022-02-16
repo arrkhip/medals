@@ -1,0 +1,231 @@
+.promo {
+  position: relative;
+  padding: 50px 0 38px;
+  overflow-x: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include max-width(768px) {
+    padding: 24px 0 49px;
+  }
+
+  &--red {
+    background-image: url('../img/banner-bg-red.jpg');
+  }
+
+  &--blue {
+    background-image: url('../img/banner-bg-blue.jpg');
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: $white;
+
+    @include max-width(1024px) {
+      display: none;
+    }
+
+    &::after {
+      font-size: 20px;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 113px;
+  }
+
+  .swiper-button-next {
+    right: 113px;
+  }
+
+  @include max-width(1300px) {
+    .swiper-button-prev {
+      left: 35px;
+    }
+
+    .swiper-button-next {
+      right: 35px;
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 34px;
+
+    @include max-width(1024px) {
+      bottom: 18px;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    border-radius: 0;
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
+    transition-property: opacity;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+
+    @include max-width(1024px) {
+      flex-direction: column;
+      padding-bottom: 80px;
+    }
+  }
+
+  &__left {
+    flex: 0 0 585px;
+
+    @include max-width(1024px) {
+      flex-basis: auto;
+    }
+  }
+
+  &__slider {
+    position: static;
+    overflow: initial;
+
+    --swiper-theme-color: #fff;
+    --swiper-pagination-bullet-size: 40px;
+    --swiper-pagination-bullet-height: 2px;
+    --swiper-pagination-bullet-inactive-color: #fff;
+    --swiper-pagination-bullet-inactive-opacity: 0.4;
+    --swiper-navigation-size: 18px;
+  }
+
+  &__info {
+    position: relative;
+    padding-left: 60px;
+    color: $white;
+
+    @include max-width(1024px) {
+      padding-left: 0;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 11px;
+      height: 348px;
+      content: '';
+      background: url('../img/decor-line.svg') center no-repeat;
+      background-size: cover;
+
+      @include max-width(1024px) {
+        display: none;
+      }
+    }
+  }
+
+  &__logo {
+    width: 178px;
+    height: 124px;
+    margin-bottom: 59px;
+
+    @include max-width(1024px) {
+      display: none;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $garamond;
+    font-size: 2.187rem;
+    font-weight: 400;
+    line-height: 140%;
+    color: $white;
+    text-transform: uppercase;
+
+    @include max-width(480px) {
+      font-size: 1.077rem;
+      text-align: center;
+    }
+  }
+
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 41px;
+
+    @include max-width(400px) {
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+  }
+
+  &__total-item {
+    span {
+      display: block;
+      margin-bottom: 7px;
+      font-family: $garamond;
+      font-size: 1.875rem;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 1.25rem;
+      line-height: 140%;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    @include max-width(400px) {
+      padding: 5px;
+    }
+  }
+
+  &__button {
+    margin-top: 56px;
+    margin-left: 60px;
+
+    @include max-width(1024px) {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      height: 40px;
+      padding: 0 44px;
+      margin: 0;
+      font-size: 12px;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__banner {
+    position: relative;
+    width: 100%;
+    max-width: 733px;
+
+    @include max-width(1300px) {
+      img {
+        max-width: 100%;
+      }
+    }
+
+    &--sssr {
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 415px;
+        z-index: -1;
+        width: 480px;
+        height: 489px;
+        content: '';
+        background: url('../img/sssr-decor.png') center no-repeat;
+        background-size: cover;
+
+        @include max-width(768px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__property {
+    margin-top: 40px;
+  }
+}

@@ -65,6 +65,10 @@
   font-weight: 600;
   line-height: 1.17;
   text-align: center;
+
+  @include max-width($phone) {
+    font-size: 1.85rem;
+  }
 }
 
 .main-block__text {

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <title>Памятная медаль</title>
+</head>
+
+<body>
+  <main class="with-aside">
+    ${require('./templates/header.html')}
+    ${require('./templates/menu.html')}
+
+    <!-- promo -->
+    <section class="promo promo--blue">
+      <div class="container">
+        <!-- wrapper -->
+        <div class="promo__wrapper">
+          <!-- promo__slider -->
+          <div class="promo__slider swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="promo__content">
+                  <div class="promo__left">
+                    <div class="promo__logo">
+                      <img src="img/logo.svg" alt="">
+                    </div>
+                    <div class="promo__info">
+                      <h2 class="promo__title">Памятные медали к 175&nbsp;-&nbsp;летнему юбилею знаменитого ювелира!
+                      </h2>
+                      <div class="promo-property promo__property">
+                        <div class="promo-property__item">
+                          <div class="promo-property__title">Льготная цена</div>
+                          <div class="promo-property__pay">
+                            <div class="promo-property__pay-new">1 745 ₽</div>
+                            <div class="promo-property__pay-old">3 490</div>
+                          </div>
+                        </div>
+                        <div class="promo-property__item">
+                          <div class="promo-property__title">Покрытие чистым серебром</div>
+                          <div class="promo-property__size">
+                            <div class="promo-property__size-width">29 мм</div>
+                            <div class="promo-property__size-height">39 мм</div>
+                          </div>
+                        </div>
+                      </div><!-- ./ End of promo__characteristics -->
+                    </div><!-- ./ End of promo__info -->
+                    <button href="#" class="promo__button button button--gold">Заказать медаль</button>
+                  </div><!-- ./ End of promo__left -->
+                  <div class="promo__right">
+                    <div class="promo__banner">
+                      <img src="img/medals-2.png" alt="">
+                    </div>
+                  </div><!-- ./ End of promo__right -->
+                </div>
+              </div> <!-- ./ End of swiper-slide -->
+              <div class="swiper-slide">
+                <div class="promo__content">
+                  <div class="promo__left">
+                    <div class="promo__logo">
+                      <img src="img/logo.svg" alt="">
+                    </div>
+                    <div class="promo__info">
+                      <h2 class="promo__title">2 Памятные медали к 175&nbsp;-&nbsp;летнему юбилею знаменитого ювелира!
+                      </h2>
+                      <div class="promo-property promo__property">
+                        <div class="promo-property__item">
+                          <div class="promo-property__title">Льготная цена</div>
+                          <div class="promo-property__pay">
+                            <div class="promo-property__pay-new">1 745 ₽</div>
+                            <div class="promo-property__pay-old">3 490</div>
+                          </div>
+                        </div>
+                        <div class="promo-property__item">
+                          <div class="promo-property__title">Покрытие чистым серебром</div>
+                          <div class="promo-property__size">
+                            <div class="promo-property__size-width">29 мм</div>
+                            <div class="promo-property__size-height">39 мм</div>
+                          </div>
+                        </div>
+                      </div><!-- ./ End of promo__characteristics -->
+                    </div><!-- ./ End of promo__info -->
+                    <button href="#" class="promo__button button button--gold">Заказать медаль</button>
+                  </div><!-- ./ End of promo__left -->
+                  <div class="promo__right">
+                    <div class="promo__banner">
+                      <img src="img/medals-2.png" alt="">
+                    </div>
+                  </div><!-- ./ End of promo__right -->
+                </div>
+              </div> <!-- ./ End of swiper-slide -->
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <!-- ./ End of promo__slider -->
+        </div>
+        <!-- ./ End of wrapper -->
+      </div>
+    </section>
+    <!-- ./ End of promo -->
+
+    ${require('./templates/mobile-form.html')}
+
+    <!-- content -->
+    <section class="content">
+      <!-- background -->
+      <div class="content__background">
+        <div class="container">
+          <!-- wrapper -->
+          <div class="content__wrapper">
+            ${require('./templates/info.html')}
+
+            <!-- aside -->
+            <aside class="aside aside--offset-sm">
+              <!-- wrapper -->
+              <div class="aside__wrapper">
+                ${require('./templates/blocks/video.html')}
+                ${require('./templates/blocks/guarantees.html')}
+                ${require('./templates/blocks/partners.html')}
+              </div>
+              <!-- ./ End of wrapper -->
+            </aside>
+            <!-- ./ End of aside -->
+
+          </div>
+          <!-- ./ End of wrapper -->
+        </div>
+      </div>
+      <!-- ./ End of background -->
+    </section>
+    <!-- ./ End of content -->
+
+    ${require('./templates/footer.html')}
+  </main>
+</body>
+
+</html>

@@ -38,6 +38,10 @@
   .swiper-pagination {
     bottom: 36px;
     display: flex;
+
+    @include max-width($phone) {
+      bottom: 28px;
+    }
   }
 
   .swiper-pagination-bullet {
@@ -45,6 +49,11 @@
     transition-timing-function: $transition-timing-function;
     transition-duration: $transition-duration;
     transition-property: opacity;
+
+    @include max-width($phone) {
+      width: 28px;
+      height: 2px;
+    }
   }
 
   .swiper-button-prev,
@@ -83,4 +92,22 @@
       display: none;
     }
   }
+}
+
+.banner__video {
+  position: relative;
+  margin-top: 46px;
+}
+
+.banner__video-title {
+  position: absolute;
+  top: calc(50% + 35px);
+  left: 50%;
+  z-index: 1;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 129%;
+  color: #fff;
+  text-align: center;
+  transform: translateX(-50%);
 }
