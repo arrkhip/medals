@@ -14,6 +14,7 @@ class Player {
     instances[this.id] = new Plyr(this.element, {
       controls: ['play-large', 'play', 'mute', 'volume', 'fullscreen'],
     });
+    this.element.player = instances[this.id];
   }
 
   static initAll() {

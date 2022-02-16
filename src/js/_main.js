@@ -18,6 +18,7 @@ import './modules/Drawer';
 import './modules/Modal';
 import './modules/Accordion';
 import './modules/PhoneMask';
+import './modules/bannerVideo';
 import './modules/Scroll';
 
 // sliders
