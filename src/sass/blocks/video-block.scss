@@ -55,6 +55,12 @@
   }
 }
 
+.video-block__inner {
+  .plyr__control--overlaid {
+    display: block;
+  }
+}
+
 @keyframes pulse {
   0% {
     opacity: 0;

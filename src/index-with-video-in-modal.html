@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <title>Main</title>
+</head>
+
+<body>
+  <main class="with-aside">
+    ${require('./templates/header.html')}
+    ${require('./templates/menu.html')}
+    ${require('./templates/banner.html')}
+    ${require('./templates/mobile-form.html')}
+    <!-- content -->
+    <section class="content">
+      <!-- background -->
+      <div class="content__background">
+        <div class="container">
+          <!-- wrapper -->
+          <div class="content__wrapper">
+            ${require('./templates/info.html')}
+            <!-- aside -->
+            <aside class="aside">
+              <!-- wrapper -->
+              <div class="aside__wrapper">
+                ${require('./templates/blocks/main-order-authorized.html')}
+                ${require('./templates/blocks/guarantees.html')}
+                <!-- block -->
+                <div class="aside__block">
+                  <!-- video-block -->
+                  <div class="video-block">
+                    <!-- wrapper -->
+                    <div class="video-block__wrapper">
+                      <div class="video-block__inner plyr">
+                        <img src="img/video-cover.png" alt="">
+                        <button type="button" data-drawer-target="#drawer-video"
+                          class="plyr__control plyr__control--overlaid">
+                          <svg>
+                            <use xlink:href="#icon-plyr-play"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- ./ End of wrapper -->
+                  </div>
+                  <!-- ./ End of video-block -->
+                </div>
+                <!-- ./ End of block -->
+                ${require('./templates/blocks/partners.html')}
+              </div>
+              <!-- ./ End of wrapper -->
+            </aside>
+            <!-- ./ End of aside -->
+          </div>
+          <!-- ./ End of wrapper -->
+        </div>
+      </div>
+      <!-- ./ End of background -->
+    </section>
+    <!-- ./ End of content -->
+    ${require('./templates/footer.html')}
+    ${require('./templates/blocks/purchase.html')}
+    ${require('./templates/modals/video.html')}
+
+  </main>
+</body>
+
+</html>
