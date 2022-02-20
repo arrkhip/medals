@@ -40,3 +40,18 @@
 .aside__block + .aside__block {
   margin: 20px 0 0 0;
 }
+
+.aside__lang-wrap {
+  position: relative;
+}
+
+.aside__lang {
+  position: absolute;
+  top: 28px;
+  right: 24px;
+
+  @include max-width(1024px) {
+    top: 8px;
+    right: 20px;
+  }
+}
