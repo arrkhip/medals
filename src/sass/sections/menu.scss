@@ -4,7 +4,7 @@
   left: 0;
   z-index: 12;
   width: 100vw;
-  height: 100vh;
+  height: var(--vh, 100vh);
   visibility: hidden;
   background: $white;
   opacity: 0;
