@@ -37,10 +37,18 @@ const mobileWidth = window.matchMedia('(max-width: 992px)');
 
 window.addEventListener('resize', function() {
   if (mobileWidth.matches) {
-    $modalCard.remove();
-    $modalContainer.insertAdjacentElement('afterbegin', $modalCard);
+    if ($modalCard) {
+      $modalCard.remove();
+    }
+    if ($modalContainer) {
+      $modalContainer.insertAdjacentElement('afterbegin', $modalCard);
+    }
   } else {
-    $modalCard.remove();
-    $modalAside.insertAdjacentElement('afterbegin', $modalCard);
+    if ($modalCard) {
+      $modalCard.remove();
+    }
+    if ($modalAside) {
+      $modalAside.insertAdjacentElement('afterbegin', $modalCard);
+    }
   }
 });

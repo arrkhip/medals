@@ -1,7 +1,9 @@
 const getHeaderHeight = () => {
   const $header = document.querySelector('.header');
-  const height = $header.offsetHeight;
-  document.documentElement.style.setProperty('--header-height', `${height}px`);
+  if ($header) {
+    const height = $header.offsetHeight;
+    document.documentElement.style.setProperty('--header-height', `${height}px`);
+  }
 };
 const addReadyClass = () => {
   document.firstElementChild.classList.add('is-ready');
