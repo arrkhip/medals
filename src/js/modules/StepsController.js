@@ -13,7 +13,7 @@ export default class StepsController {
     this.$currentStep = this.$steps.find(($step) => $step.classList.contains('current')) || this.$steps[0];
     this.currentIndex = this.$steps.indexOf(this.$currentStep) || 0;
 
-    this.onChangeStepCallback = () => {};
+    this.beforeChangeStepCallback = () => true;
 
     this.init();
   }
@@ -30,8 +30,10 @@ export default class StepsController {
 
     e.preventDefault();
 
-    this.open(this.currentIndex + 1);
-    this.addInfo();
+    if (this.beforeChangeStepCallback()) {
+      this.open(this.currentIndex + 1);
+      this.addInfo();
+    }
   }
 
   open(index) {
@@ -56,8 +58,6 @@ export default class StepsController {
     if (index >= this.$steps.length) return;
 
     this.setRequires();
-
-    this.onChangeStepCallback.apply(this);
   }
 
   setRequires() {
@@ -110,8 +110,8 @@ export default class StepsController {
     $info.appendChild($html);
   }
 
-  setChangeStepCallback(callback) {
-    this.onChangeStepCallback = callback;
+  setBeforeChangeStepCallback(callback) {
+    this.beforeChangeStepCallback = callback;
   }
 
   static init() {
