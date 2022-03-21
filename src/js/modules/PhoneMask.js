@@ -26,6 +26,7 @@ export default class PhoneMask {
       preferredCountries: this.preferredCountries,
       autoPlaceholder: 'aggressive',
       allowDropdown: true,
+      separateDialCode: true,
 
       customPlaceholder: (selectedCountryPlaceholder, selectedCountryData) =>
         selectedCountryPlaceholder.replace(/[0-9]/g, this._char),
