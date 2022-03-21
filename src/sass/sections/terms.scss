@@ -124,3 +124,51 @@
     color: $gray-dark;
   }
 }
+
+.terms__accordion-more {
+  display: none;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  border: none;
+
+  @include max-width(1024px) {
+    display: block;
+  }
+
+  .terms__accordion-button {
+    padding: 0;
+    font-family: $mont;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 20px;
+    color: $main;
+  }
+
+  .terms__accordion-icon {
+    margin-left: 4px;
+    .terms__accordion-svg {
+      width: 16px;
+      height: 16px;
+      stroke: $main;
+    }
+  }
+  .terms__accordion-content {
+    padding: 0;
+    p {
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.terms__accordion-more--mobile {
+  display: none;
+
+  @include max-width(1024px) {
+    display: block;
+  }
+}

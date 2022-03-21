@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <title>Main</title>
+</head>
+
+<body>
+  <main class="with-aside">
+    ${require('./templates/header.html')}
+    ${require('./templates/menu.html')}
+    ${require('./templates/banner.html')}
+    ${require('./templates/mobile-form.html')}
+    <!-- content -->
+    <section class="content">
+      <!-- background -->
+      <div class="content__background">
+        <div class="container">
+          <!-- wrapper -->
+          <div class="content__wrapper">
+            ${require('./templates/info.html')}
+            <!-- aside -->
+            <aside class="aside">
+              <!-- wrapper -->
+              <div class="aside__wrapper">
+                <!-- block -->
+                <div class="aside__block js_aside__form">
+                  <!-- aside__lang-wrap -->
+                  <div class="aside__lang-wrap">
+                    <!-- lang -->
+                    <div id="dropdown1" class="aside__lang lang j_dropdown">
+                      <button type="button" class="lang__button j_toggleDropdown">
+                        <div class="lang__placeholder">
+                          <img src="img/icon-flag-ru.svg" class="lang__flag" alt="">
+                          <span class="lang__name">RU</span>
+                        </div>
+                        <div class="lang__arrow-wrapper">
+                          <svg class="lang__arrow">
+                            <use xlink:href="#icon-chevron-down"></use>
+                          </svg>
+                        </div>
+                      </button>
+                      <div class="j_dropdown__content lang__content">
+                        <div class="lang__container">
+                          <ul class="j_dropdown__list lang__list">
+                            <li class="lang__item">
+                              <a href="#" class="lang__subtitle">
+                                <img src="img/icon-flag-ru.svg" class="lang__flag" alt="">
+                                <span class="lang__name">RU</span>
+                              </a>
+                            </li>
+                            <li class="lang__item">
+                              <a href="#" class="lang__subtitle">
+                                <img src="img/icon-flag-en.svg" class="lang__flag" alt="">
+                                <span class="lang__name">EN</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- ./ End of aside__lang -->
+                  </div>
+                  <!-- ./ End of aside__lang-wrap -->
+                  <!-- main-block -->
+                  <div class="main-block">
+                    <!-- wrapper -->
+                    <div class="main-block__wrapper">
+                      <!-- logo -->
+                      <a href="#" class="main-block__logo">
+                        <img src="img/logo.svg" alt="Монетный двор">
+                      </a>
+                      <!-- ./ End of logo -->
+                      <!-- title -->
+                      <p class="main-block__title">Рады видеть снова, Александр!</p>
+                      <!-- ./ End of title -->
+                      <!-- personal -->
+                      <div class="personal">
+                        <img src="img/stars.svg" alt="Звезды" class="personal__stars">
+                        <p class="personal__message">Вам доступно <a href="#">личное бронирование!</a></p>
+                        <!-- info -->
+                        <div class="personal__info">
+                          <div class="personal__info-row">
+                            <div class="personal__info-icon">
+                              <svg class="personal__info-svg">
+                                <use xlink:href="#mail"></use>
+                              </svg>
+                            </div>
+                            <div class="personal__info-text">
+                              <b>E-mail:</b> Alkonst_1987@mail.ru
+                            </div>
+                          </div>
+                          <div class="personal__info-row">
+                            <div class="personal__info-icon">
+                              <svg class="personal__info-svg">
+                                <use xlink:href="#phone"></use>
+                              </svg>
+                            </div>
+                            <div class="personal__info-text">
+                              <b>Телефон:</b> +7(953) 723-41-20
+                            </div>
+                          </div>
+                          <div class="personal__info-row">
+                            <div class="personal__info-icon">
+                              <svg class="personal__info-svg">
+                                <use xlink:href="#map-pin"></use>
+                              </svg>
+                            </div>
+                            <div class="personal__info-text">
+                              <b>Адрес:</b> г. Тамбов, ул. Набережная 28/4, кв. 124, 3920002
+                            </div>
+                          </div>
+                        </div>
+                        <!-- ./ End of info -->
+                        <!-- edit -->
+                        <div class="personal__edit">
+                          <div class="personal__edit-icon">
+                            <svg class="personal__edit-svg">
+                              <use xlink:href="#edit"></use>
+                            </svg>
+                          </div>
+                          <div class="personal__edit-text">
+                            <a href="#">Данные не совпадают? Измените</a>
+                          </div>
+                        </div>
+                        <!-- ./ End of edit -->
+                      </div>
+                      <!-- ./ End of personal -->
+                      <!-- button -->
+                      <div class="main-block__button">
+                        <button class="button">Заказать</button>
+                      </div>
+                      <!-- ./ End of button -->
+                    </div>
+                    <!-- ./ End of wrapper -->
+                  </div>
+                  <!-- ./ End of main-block -->
+                </div>
+                <!-- ./ End of block -->
+
+                ${require('./templates/blocks/guarantees.html')}
+                ${require('./templates/blocks/video.html')}
+                ${require('./templates/blocks/partners.html')}
+              </div>
+              <!-- ./ End of wrapper -->
+            </aside>
+            <!-- ./ End of aside -->
+          </div>
+          <!-- ./ End of wrapper -->
+        </div>
+      </div>
+      <!-- ./ End of background -->
+    </section>
+    <!-- ./ End of content -->
+    ${require('./templates/footer.html')}
+    ${require('./templates/blocks/purchase.html')}
+  </main>
+</body>
+
+</html>

@@ -24,12 +24,12 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <!-- video-block -->
-                <div class="banner__video-wrap">
-                  <div class="banner__video video-block">
+                <div class="banner__video-wrap video">
+                  <div class="banner__video video-block video__block">
 
                     <!-- wrapper -->
                     <div class="video-block__wrapper">
-                      <div class="plyr__video-embed" data-player="video">
+                      <div class="plyr__video-embed" data-player="banner-video">
                         <iframe src="https://www.youtube.com/embed/bTqVqk7FSmY?origin=https://plyr.io"
                           data-poster="${require('./img/video-cover.png')}"></iframe>
                       </div>
@@ -40,14 +40,26 @@
 
                   <div class="banner__video-banner">
                     <img src="img/video-cover.png" alt="">
-                    <div class="banner__video-title">Посмотрите <br> короткий ролик о нас <br> за 2 минуты</div>
+
+                    <!-- <div class="banner__video-title">Посмотрите <br> короткий ролик о нас <br> за 2 минуты</div> -->
+
+                    <div class="banner__video-play">
+                      <button type="button" class="plyr__control plyr__control--overlaid j_player-play">
+                        <svg>
+                          <use xlink:href="#icon-plyr-play"></use>
+                        </svg>
+                      </button>
+
+                      <span>Посмотрите <br> короткий ролик о нас <br> за 2 минуты</span>
+                    </div><!-- End of .banner__video-play -->
+
                   </div>
 
                 </div>
 
-                plyr.player.play();
+                <!-- plyr.player.play(); -->
 
-                on:{slideChange}
+                <!-- on:{slideChange} -->
 
 
                 <!-- ./ End of video-block -->

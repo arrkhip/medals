@@ -37,3 +37,47 @@
     }
   }
 }
+
+.content--mobile-tabs {
+  @include max-width(1024px) {
+    padding: 48px 0 0 0;
+    margin-top: 40px;
+
+    .info {
+      margin: -40px 0 0 0 !important;
+
+      &__tabs {
+        display: flex;
+        margin: 0 0 24px 0;
+        overflow-x: auto;
+      }
+
+      &__tab {
+        min-height: 40px;
+        padding: 4px 16px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.4;
+        white-space: nowrap;
+      }
+
+      &__content {
+        display: none;
+      }
+
+      &__accordion {
+        border-top: none;
+        border-bottom: none;
+      }
+
+      &__accordion-button {
+        display: none;
+      }
+
+      &__accordion-hidden {
+        max-height: inherit;
+        overflow: auto;
+      }
+    }
+  }
+}
