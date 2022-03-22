@@ -24,24 +24,25 @@ export default class PhoneMask {
       onlyCountries: this.onlyCountries,
       initialCountry: this.initialCountry,
       preferredCountries: this.preferredCountries,
-      autoPlaceholder: 'aggressive',
+      // autoPlaceholder: 'aggressive',
       allowDropdown: true,
       separateDialCode: true,
+      autoPlaceholder: false,
 
-      customPlaceholder: (selectedCountryPlaceholder, selectedCountryData) =>
-        selectedCountryPlaceholder.replace(/[0-9]/g, this._char),
+      // customPlaceholder: (selectedCountryPlaceholder, selectedCountryData) =>
+      //   selectedCountryPlaceholder.replace(/[0-9]/g, this._char),
     });
 
     if (window.intlTelInputGlobals) {
       window.intlTelInputGlobals.loadUtils(this.srcUtilsScripts).then((res) => {
-        this.setMask();
+        // this.setMask();
       });
     }
 
     this.$el.intl = intl;
 
-    this.$el.addEventListener('focus', this.setMask.bind(this));
-    this.$el.addEventListener('countrychange', this.setMask.bind(this));
+    // this.$el.addEventListener('focus', this.setMask.bind(this));
+    // this.$el.addEventListener('countrychange', this.setMask.bind(this));
   }
 
   setMask() {
