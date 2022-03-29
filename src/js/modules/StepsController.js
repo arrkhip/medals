@@ -26,7 +26,9 @@ export default class StepsController {
   }
 
   submit(e) {
-    if (e.submitter.classList.contains('j_stepSubmit')) return false;
+    const isSubmit = this.$steps[this.currentIndex].querySelector('.j_stepSubmit');
+
+    if (isSubmit) return false;
 
     e.preventDefault();
 
